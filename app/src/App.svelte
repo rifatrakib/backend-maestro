@@ -1,11 +1,7 @@
 <script>
-  import Button from './components/button.svelte';
+    import Navbar from './components/navbar.svelte';
 </script>
 
 <main>
-  <nav>
-    <Button label="Home" />
-    <Button label="About" />
-    <Button label="Contact" />
-  </nav>
+    <Navbar />
 </main>
