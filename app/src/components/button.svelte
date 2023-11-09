@@ -1,4 +1,8 @@
 <script>
+    import { createEventDispatcher } from "svelte";
+
+    const dispatch = createEventDispatcher();
+
     export let label;
 </script>
 
@@ -24,4 +28,4 @@
     }
 </style>
 
-<button>{label}</button>
+<button on:click={() => dispatch('changePage', label)}>{label}</button>

@@ -1,5 +1,7 @@
 <script>
     import Button from './button.svelte';
+
+    export let options;
 </script>
 
 <style>
@@ -20,8 +22,8 @@
 
 <nav>
     <div>
-        <Button label='Home' />
-        <Button label='About' />
-        <Button label='Contact' />
+        {#each options as option}
+            <Button label='{option}' on:changePage />
+        {/each}
     </div>
 </nav>
