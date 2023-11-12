@@ -1,5 +1,6 @@
 <script>
     import Button from './button.svelte';
+    import Logo from './logo.svelte';
 
     export let options;
 </script>
@@ -8,7 +9,9 @@
     div {
         width: 100%;
         margin: 0 auto;
-        background-color: #1a1a1a;
+        background-color: #242424;
+        position: sticky;
+        top: 0;
     }
 
     nav {
@@ -30,7 +33,7 @@
 
 <div>
     <nav>
-        <Button label='Abdur Rakib' properties={{type: 'logo'}} />
+        <Logo on:changePage />
         <div class="nav-buttons">
             {#each options as option}
                 <Button label='{option}' on:changePage />

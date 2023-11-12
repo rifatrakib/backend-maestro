@@ -2,27 +2,29 @@
     import { createEventDispatcher } from "svelte";
 
     const dispatch = createEventDispatcher();
-
-    export let label;
 </script>
 
 <style>
     button {
         border-radius: 8px;
         border: 1px solid transparent;
-        padding: 0.6em 1.2em;
+        padding: 0 1.2em;
+        letter-spacing: 0.1em;
         margin: 1em;
-        font-size: 1em;
-        font-weight: 500;
+        font-size: 1.3em;
+        font-weight: 700;
         font-family: inherit;
         background-color: #242424;
         cursor: pointer;
         transition: border-color 0.25s;
     }
 
-    button:hover {
-        border-color: #1abc9c;
+    button span:first-child {
+        color: #1abc9c;
     }
 </style>
 
-<button on:click={() => dispatch('changePage', label)}>{label}</button>
+<button on:click={() => dispatch('changePage', 'Home')}>
+    <span>Abdur</span>
+    <span>Rakib</span>
+</button>
