@@ -4,6 +4,7 @@
     const dispatch = createEventDispatcher();
 
     export let label;
+    export let isActive = false;
 </script>
 
 <style>
@@ -20,9 +21,18 @@
         transition: border-color 0.25s;
     }
 
-    button:hover {
+    button:not(:disabled):hover {
         border-color: #1abc9c;
+    }
+
+    button.active {
+        color: #1abc9c;
+        font-weight: 900;
     }
 </style>
 
-<button on:click={() => dispatch('changePage', label)}>{label}</button>
+{#if isActive === true}
+    <button disabled class="active" on:click={() => dispatch('changePage', label)}>{label}</button>
+{:else}
+    <button on:click={() => dispatch('changePage', label)}>{label}</button>
+{/if}

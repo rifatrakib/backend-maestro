@@ -1,21 +1,21 @@
 <script>
+    import { createEventDispatcher } from "svelte";
     import Button from './button.svelte';
     import Logo from './logo.svelte';
 
     export let options;
+
+    const dispatch = createEventDispatcher();
+    let activePage = 'Home';
+
+    function changePage(event) {
+        activePage = event.detail;
+        dispatch('changePage', activePage);
+    }
 </script>
 
 <style>
-    div {
-        width: 100%;
-        margin: 0 auto;
-        background-color: #242424;
-        position: sticky;
-        top: 0;
-    }
-
     nav {
-        width: 70%;
         margin: inherit;
         text-align: center;
         display: flex;
@@ -31,14 +31,15 @@
     }
 </style>
 
-<div>
-    <nav>
-        <Logo on:changePage />
-        <div class="nav-buttons">
-            {#each options as option}
-                <Button label='{option}' on:changePage />
-            {/each}
-        </div>
-        <Button label='Extra' />
-    </nav>
-</div>
+<nav>
+    <Logo on:changePage />
+    <div class="nav-buttons">
+        {#each options as option}
+            <Button
+                label='{option}'
+                isActive={option === activePage}
+                on:changePage={changePage} />
+        {/each}
+    </div>
+    <Button label='Extra' />
+</nav>
