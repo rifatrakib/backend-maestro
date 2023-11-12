@@ -5,25 +5,37 @@
 </script>
 
 <style>
-    nav {
-        background-color: #1a1a1a;
+    div {
         width: 100%;
         margin: 0 auto;
-        text-align: center;
+        background-color: #1a1a1a;
     }
 
-    nav div {
+    nav {
+        width: 70%;
+        margin: inherit;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav div.nav-buttons {
         width: 30%;
-        margin: 0 auto;
+        margin: inherit;
         display: flex;
         justify-content: space-evenly;
+        gap: 2.5rem;
     }
 </style>
 
-<nav>
-    <div>
-        {#each options as option}
-            <Button label='{option}' on:changePage />
-        {/each}
-    </div>
-</nav>
+<div>
+    <nav>
+        <Button label='Abdur Rakib' properties={{type: 'logo'}} />
+        <div class="nav-buttons">
+            {#each options as option}
+                <Button label='{option}' on:changePage />
+            {/each}
+        </div>
+        <Button label='Extra' />
+    </nav>
+</div>

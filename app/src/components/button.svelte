@@ -4,6 +4,7 @@
     const dispatch = createEventDispatcher();
 
     export let label;
+    export let properties = {'type': 'menu-button'};
 </script>
 
 <style>
@@ -19,13 +20,14 @@
         cursor: pointer;
         transition: border-color 0.25s;
     }
-    button:hover {
+
+    button.menu-button:hover {
         border-color: #646cff;
-    }
-    button:focus,
-    button:focus-visible {
-        outline: 4px auto -webkit-focus-ring-color;
     }
 </style>
 
-<button on:click={() => dispatch('changePage', label)}>{label}</button>
+{#if properties.type === 'logo'}
+    <button on:click={() => dispatch('changePage', label)}>{label}</button>
+{:else}
+    <button class='menu-button' on:click={() => dispatch('changePage', label)}>{label}</button>
+{/if}
