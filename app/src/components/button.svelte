@@ -1,5 +1,5 @@
 <script>
-    import { createEventDispatcher } from "svelte";
+    import { createEventDispatcher } from 'svelte';
 
     const dispatch = createEventDispatcher();
 
@@ -16,9 +16,10 @@
         font-size: 1em;
         font-weight: 500;
         font-family: inherit;
-        background-color: #242424;
+        background-color: transparent;
         cursor: pointer;
         transition: border-color 0.25s;
+        user-select: none;
     }
 
     button:not(:disabled):hover {
@@ -31,8 +32,8 @@
     }
 </style>
 
-{#if isActive === true}
-    <button disabled class="active" on:click={() => dispatch('changePage', label)}>{label}</button>
-{:else}
-    <button on:click={() => dispatch('changePage', label)}>{label}</button>
-{/if}
+<button
+    disabled={isActive}
+    class:active={isActive}
+    on:click={() => dispatch('changePage', label)}
+>{label}</button>

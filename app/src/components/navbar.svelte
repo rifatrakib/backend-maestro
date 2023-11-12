@@ -1,5 +1,5 @@
 <script>
-    import { createEventDispatcher } from "svelte";
+    import { createEventDispatcher } from 'svelte';
     import Button from './button.svelte';
     import Logo from './logo.svelte';
 
@@ -20,9 +20,12 @@
         text-align: center;
         display: flex;
         justify-content: space-between;
+        background-color: #11111130;
+        z-index: 10;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }
 
-    nav div.nav-buttons {
+    nav section.nav-buttons {
         width: 30%;
         margin: inherit;
         display: flex;
@@ -33,13 +36,13 @@
 
 <nav>
     <Logo on:changePage />
-    <div class="nav-buttons">
+    <section class="nav-buttons">
         {#each options as option}
             <Button
                 label='{option}'
                 isActive={option === activePage}
                 on:changePage={changePage} />
         {/each}
-    </div>
+    </section>
     <Button label='Extra' />
 </nav>
