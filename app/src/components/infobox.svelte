@@ -18,7 +18,7 @@
         let index = 0;
         let timeout;
 
-        function typeNextCharacter() {
+        const typeNextCharacter = () => {
             animatedText = textContent.slice(0, index);
             index++;
 

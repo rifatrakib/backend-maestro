@@ -6,10 +6,20 @@
     export let page;
 </script>
 
-{#if page === 'Home'}
-    <Home />
-{:else if page === 'About'}
-    <About />
-{:else if page === 'Contact'}
-    <Contact />
-{/if}
+<style>
+    div {
+        max-width: 75%;
+        margin: 0 auto;
+        text-align: center;
+    }
+</style>
+
+<div>
+    {#if page === 'Home'}
+        <Home />
+    {:else if page === 'About'}
+        <About />
+    {:else if page === 'Contact'}
+        <Contact />
+    {/if}
+</div>
