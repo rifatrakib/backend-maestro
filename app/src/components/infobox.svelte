@@ -2,12 +2,10 @@
     import { onMount } from 'svelte';
 
     export let image;
-    export let textContent;
+    export let sentences;
 
     let animatedText = '';
     let cursorVisible = true;
-    let isComplete = false;
-    let timeoutId;
 
     onMount(() => {
         typeText();
@@ -15,18 +13,22 @@
     });
 
     function typeText() {
+        let sentenceIndex = 0;
         let index = 0;
         let timeout;
 
         const typeNextCharacter = () => {
-            animatedText = textContent.slice(0, index);
+            let sentence = sentences[sentenceIndex];
+            animatedText = sentence.slice(0, index) + ' ';
             index++;
 
-            if (index <= textContent.length) {
+            if (index <= sentence.length) {
                 timeout = Math.floor(Math.random() * Math.random() * (500 - 200 + 1));
-                timeoutId = setTimeout(typeNextCharacter, timeout);
+                setTimeout(typeNextCharacter, timeout);
             } else {
-                isComplete = true;
+                index = 0;
+                sentenceIndex = (sentenceIndex + 1) % sentences.length;
+                setTimeout(typeNextCharacter, (sentenceIndex === 0) ? 2500 : 1000);
             }
         }
 
@@ -34,13 +36,8 @@
     }
 
     function startCursorBlink() {
-        const intervalId = setInterval(() => {
+        setInterval(() => {
             cursorVisible = !cursorVisible;
-            if (isComplete) {
-                cursorVisible = false;
-                clearInterval(intervalId);
-                clearTimeout(timeoutId);
-            }
         }, 100);
     }
 </script>
@@ -92,7 +89,7 @@
             <img src="{image.link}" alt="{image.alt}" />
         </div>
         <div class="text-column">
-            <p>{animatedText}<span style="visibility: {cursorVisible ? 'visible' : 'hidden'}">|</span></p>
+            <p>{animatedText}<span style="visibility: {cursorVisible ? 'visible' : 'hidden'}">_</span></p>
         </div>
     </div>
 </div>
