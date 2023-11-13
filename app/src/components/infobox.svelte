@@ -7,6 +7,7 @@
     let animatedText = '';
     let cursorVisible = true;
     let isComplete = false;
+    let timeoutId;
 
     onMount(() => {
         typeText();
@@ -15,14 +16,21 @@
 
     function typeText() {
         let index = 0;
-        const intervalId = setInterval(() => {
+        let timeout;
+
+        function typeNextCharacter() {
             animatedText = textContent.slice(0, index);
             index++;
-            if (index > textContent.length) {
+
+            if (index <= textContent.length) {
+                timeout = Math.floor(Math.random() * Math.random() * (500 - 200 + 1));
+                timeoutId = setTimeout(typeNextCharacter, timeout);
+            } else {
                 isComplete = true;
-                clearInterval(intervalId);
             }
-        }, 100);
+        }
+
+        typeNextCharacter();
     }
 
     function startCursorBlink() {
@@ -31,6 +39,7 @@
             if (isComplete) {
                 cursorVisible = false;
                 clearInterval(intervalId);
+                clearTimeout(timeoutId);
             }
         }, 100);
     }
