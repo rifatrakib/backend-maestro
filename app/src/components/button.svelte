@@ -13,12 +13,12 @@
         border: 1px solid transparent;
         padding: 0.6em 1.2em;
         margin: 1em;
-        font-size: 1em;
+        font-size: 1.2rem;
         font-weight: 500;
         font-family: inherit;
         background-color: transparent;
         cursor: pointer;
-        transition: border-color 0.25s;
+        transition: border-color 0.75s;
         user-select: none;
     }
 

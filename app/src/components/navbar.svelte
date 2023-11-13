@@ -20,17 +20,16 @@
         text-align: center;
         display: flex;
         justify-content: space-between;
-        background-color: #11111130;
+        background-color: #00000030;
         z-index: 10;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }
 
     nav section.nav-buttons {
-        width: 30%;
+        width: 20%;
         margin: inherit;
         display: flex;
         justify-content: space-evenly;
-        gap: 2.5rem;
     }
 </style>
 
