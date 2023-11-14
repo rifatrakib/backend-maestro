@@ -1,5 +1,6 @@
 <script>
-    import Infobox from '../../components/infobox.svelte';
+    import Infobox from './welcome.svelte';
+    import Skills from './toolbox.svelte';
 
     const image = {
         link: '/intro.svg',
@@ -17,4 +18,5 @@
 
 <article>
     <Infobox image={image} sentences={sentences} />
+    <Skills />
 </article>
