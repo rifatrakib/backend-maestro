@@ -1,12 +1,12 @@
 <script>
     import { createEventDispatcher } from 'svelte';
-    import Button from './button.svelte';
-    import Logo from './logo.svelte';
+    import Button from '../components/button.svelte';
+    import Logo from '../components/logo.svelte';
 
     export let options;
+    export let activePage;
 
     const dispatch = createEventDispatcher();
-    let activePage = 'Home';
 
     function changePage(event) {
         activePage = event.detail;
@@ -18,7 +18,9 @@
     div {
         width: 100%;
         margin: 0 auto;
-        background-color: rgba(0, 0, 0, 0.15);
+        background-color: #202020;
+        top: 0;
+        position: sticky;
         z-index: 10;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }

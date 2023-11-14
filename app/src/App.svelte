@@ -1,5 +1,5 @@
 <script>
-    import Navbar from './components/navbar.svelte';
+    import Navbar from './pages/navbar.svelte';
     import Body from './pages/body.svelte';
 
     let page = 'Home';
@@ -7,6 +7,9 @@
 </script>
 
 <main>
-    <Navbar options={options} on:changePage={(event) => page = event.detail} />
+    <Navbar
+        options={options}
+        activePage={page}
+        on:changePage={(event) => page = event.detail} />
     <Body page={page} />
 </main>
