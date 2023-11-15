@@ -7,7 +7,7 @@
 <style>
     button {
         border: 1px solid transparent;
-        padding: 0 1.2em;
+        padding: 0 1.2em 0 0;
         letter-spacing: 0.1em;
         margin: 1em;
         font-size: 1.3em;

@@ -2,9 +2,28 @@
     import { createEventDispatcher } from 'svelte';
     import Button from '../components/button.svelte';
     import Logo from '../components/logo.svelte';
+    import Social from '../components/social.svelte';
 
     export let options;
     export let activePage;
+
+    const socials = [
+        {
+            logo: '/socials/github.svg',
+            alt: 'GitHub Logo',
+            link: 'https://github.com/rifatrakib',
+        },
+        {
+            logo: '/socials/linkedin.svg',
+            alt: 'LinkedIn Logo',
+            link: 'https://www.linkedin.com/in/md-abdur-rakib-1508/',
+        },
+        {
+            logo: '/socials/mailbox.svg',
+            alt: 'Mail Logo',
+            link: 'mailto:abdur.rakib.1508@gmail.com',
+        }
+    ]
 
     const dispatch = createEventDispatcher();
 
@@ -26,7 +45,7 @@
     }
 
     nav {
-        width: 70%;
+        width: 75%;
         margin: inherit;
         text-align: center;
         display: flex;
@@ -38,6 +57,13 @@
         margin: inherit;
         display: flex;
         justify-content: space-evenly;
+    }
+
+    nav section.social-buttons {
+        gap: 0.5rem;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: auto;
     }
 </style>
 
@@ -52,6 +78,10 @@
                     on:changePage={changePage} />
             {/each}
         </section>
-        <Button label='Extra' />
+        <section class="social-buttons">
+            {#each socials as social}
+                <Social data={social} />
+            {/each}
+        </section>
     </nav>
 </div>

@@ -9,11 +9,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 20px;
-        border-radius: 20px;
+        border-radius: 50%;
         background-color: #ffffffcf;
-        padding: 20px;
-        width: calc(100% - 20px);
+        padding: 10px;
         box-sizing: border-box;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }

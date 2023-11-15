@@ -2,22 +2,8 @@
     import Capsule from '../../components/capsule.svelte';
 
     const tools = [
-        'Python',
-        'NodeJS',
-        'Docker',
-        'AWS',
-        'Elastic',
-        'Terraform',
-        'Git',
-        'GitHub',
-        'PostgreSQL',
-        'MongoDB',
-        'MySQL',
-        'Redis',
-        'InfluxDB',
-        'Svelte',
-        'D3JS',
-        'Go',
+        'Python', 'NodeJS', 'Docker', 'AWS', 'Elastic', 'Terraform', 'Git', 'GitHub',
+        'PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'InfluxDB', 'Svelte', 'D3JS', 'Go',
     ]
 </script>
 
@@ -31,6 +17,7 @@
 
     section.logos {
         display: grid;
+        gap: 1.5rem;
         grid-template-columns: repeat(8, 1fr);
         justify-content: space-evenly;
         margin-bottom: 10rem;
