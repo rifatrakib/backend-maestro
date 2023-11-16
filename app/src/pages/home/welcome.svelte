@@ -54,16 +54,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 10px;
         width: calc(100% - 20px);
         box-sizing: border-box;
-        margin-bottom: 10px;
-        gap: 5%;
+        gap: 5rem;
     }
 
     .image-column {
         flex: 0 0 50%;
-        margin-right: 10px;
     }
 
     .text-column {
