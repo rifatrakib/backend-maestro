@@ -1,6 +1,7 @@
 <script>
     import Infobox from './welcome.svelte';
     import Skills from './toolbox.svelte';
+    import Showcase from './showcase.svelte';
 
     const image = {
         link: '/intro.svg',
@@ -18,5 +19,6 @@
 
 <article>
     <Infobox image={image} sentences={sentences} />
+    <Showcase />
     <Skills />
 </article>
