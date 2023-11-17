@@ -5,18 +5,33 @@
         {
             icon: '/icons/api.svg',
             title: 'API Engineering',
-            description: 'Experienced in designing, building, optimizing, and maintaining RESTful APIs using Python, NodeJS, and Go',
+            description: 'Design, build, containerize, and maintain REST API with Python, NodeJS, and Go',
         },
         {
             icon: '/icons/database.svg',
             title: 'Database Engineering',
-            description: 'Experienced in using MySQL, MongoDB, PostgreSQL, InfluxDB, elasticsearch, and Redis',
+            description: 'Using MySQL, MongoDB, PostgreSQL, InfluxDB, elasticsearch, and Redis',
         },
         {
             icon: '/icons/cloud.svg',
             title: 'Cloud Computing',
-            description: 'Experienced in designing, building, optimizing, and maintaining application infrastructure using AWS',
+            description: 'Design, build, optimize, and maintain application infrastructure on AWS',
         },
+        {
+            icon: '/icons/system-design.svg',
+            title: 'System Design',
+            description: 'Design and implement scalable systems for high availability and performance',
+        },
+        {
+            icon: '/icons/data.svg',
+            title: 'Data Engineering & Analytics',
+            description: 'Build pipelines to scrape, store, and perform analysis and analytics on data',
+        },
+        {
+            icon: '/icons/devops.svg',
+            title: 'DevOps',
+            description: 'Build CI/CD pipelines to build, test, deploy, and monitor applications',
+        }
     ]
 </script>
 
