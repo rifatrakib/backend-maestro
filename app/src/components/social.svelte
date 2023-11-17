@@ -26,6 +26,10 @@
         height: 40px;
         border: 0px solid transparent;
     }
+
+    img:hover {
+        transform: scale(1.2);
+    }
 </style>
 
 <button>
