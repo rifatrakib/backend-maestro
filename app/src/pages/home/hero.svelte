@@ -1,8 +1,15 @@
 <script>
-    import { onMount } from 'svelte';
+    import { onDestroy, onMount } from 'svelte';
+    import { heroStore } from './store.js';
 
-    export let image;
-    export let sentences;
+    let image;
+    let sentences;
+    const unsubscribe = heroStore.subscribe(value => {
+        image = value.image;
+        sentences = value.sentences;
+    });
+
+    onDestroy(() => unsubscribe());
 
     let animatedText = '';
     let cursorVisible = true;

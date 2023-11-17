@@ -1,10 +1,12 @@
 <script>
+    import { onDestroy } from 'svelte';
     import Capsule from '../../components/capsule.svelte';
+    import { toolsStore } from './store.js';
 
-    const tools = [
-        'Python', 'NodeJS', 'Docker', 'AWS', 'Elastic', 'Terraform', 'Git', 'GitHub',
-        'PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'InfluxDB', 'Svelte', 'D3JS', 'Go',
-    ]
+    let tools;
+    const unsubscribe = toolsStore.subscribe(value => tools = value);
+
+    onDestroy(() => unsubscribe());
 </script>
 
 <style>
