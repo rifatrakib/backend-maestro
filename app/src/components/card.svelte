@@ -9,7 +9,6 @@
     function handleHover() {
         isHovered = !isHovered;
         iconUrl = isHovered ? `${icon.split(".svg")[0]}-hover.svg` : icon;
-        console.log(iconUrl);
     }
 </script>
 
