@@ -19,8 +19,8 @@
 
     section.logos {
         display: grid;
-        gap: 1.5rem;
-        grid-template-columns: repeat(8, 1fr);
+        gap: 1rem;
+        grid-template-columns: repeat(16, 1fr);
         justify-content: space-evenly;
         margin-bottom: 10rem;
     }
