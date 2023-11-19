@@ -3,14 +3,32 @@
 </script>
 
 <style>
-    section {
+    section.event-container {
         display: flex;
         flex-direction: column;
         align-items: baseline;
         justify-content: center;
         text-align: left;
         gap: 1rem;
-        padding-left: 3rem;
+        padding-left: 2rem;
+    }
+
+    /* .event-container {
+        border-left: 2px solid #ffffff;
+    } */
+
+    section.event-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section.event-header img {
+        width: 2rem;
+        height: 2rem;
+        /* padding: 0 0 0 1rem; */
+        margin: 0 0 0 -1rem;
     }
 
     header {
@@ -19,15 +37,43 @@
         line-height: 1.2rem;
     }
 
-    p {
-        font-size: 1rem;
-        font-weight: 400;
-        margin-bottom: 0.5rem;
+    section.event-details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    section.event-details .divider {
+        height: 100%;
+        border-right: 1px solid #ffffff50;
+    }
+
+    section.event {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         padding-left: 2rem;
     }
 
-    p span {
-        font-weight: 700;
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    p {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    p span img {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     ul {
@@ -36,23 +82,39 @@
     }
 
     li {
-        margin-left: 6rem;
+        margin-left: 3.5rem;
         font-size: 1rem;
         font-weight: 400;
         margin-bottom: 0.5rem;
+        text-align: justify;
     }
 </style>
 
-<section>
-    <header>{eventData.header}</header>
-    <div>
-        {#each Object.entries(eventData.subheaders) as [key, value]}
-            <p><span>{`${key.charAt(0).toUpperCase()}${key.slice(1)}`}: </span>{value}</p>
-        {/each}
-    </div>
-    <ul>
-        {#each eventData.points as point}
-            <li>{point}</li>
-        {/each}
-    </ul>
+<section class="event-container">
+    <section class="event-header">
+        <img src="/icons/{eventData.type}.svg" alt="work icon" />
+        <header>{eventData.header}</header>
+    </section>
+    <section class="event-details">
+        <section class="divider"></section>
+        <section class="event">
+            <div>
+                {#each Object.entries(eventData.subheaders) as [key, value]}
+                    <p class="metadata">
+                        <span><img src="/icons/{key}.svg" alt="work icon" /></span>
+                        <span>{value}</span>
+                    </p>
+                {/each}
+            </div>
+            <p>
+                <span><img src="/icons/responsibilities.svg" alt="Icon" /></span>
+                <span>Responsibilities I have undertaken in this role:</span>
+            </p>
+            <ul>
+                {#each eventData.points as point}
+                    <li>{point}</li>
+                {/each}
+            </ul>
+        </section>
+    </section>
 </section>

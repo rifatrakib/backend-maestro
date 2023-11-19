@@ -17,17 +17,25 @@
         font-size: 1.5rem;
         font-weight: 600;
         text-align: left;
-        line-height: 1.2rem;
+        line-height: 2rem;
         margin: 0;
         padding: 0;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 </style>
 
 <section>
     {#each Object.entries(eventsData) as [type, events]}
         <header>{`${type.charAt(0).toUpperCase()}${type.slice(1)} Experiences`}</header>
-        {#each events as event}
-            <Event eventData={event} />
-        {/each}
+        <div>
+            {#each events as event}
+                <Event eventData={event} />
+            {/each}
+        </div>
     {/each}
 </section>
