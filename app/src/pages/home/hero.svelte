@@ -109,7 +109,7 @@
 <div class="card-container">
     <div class="card">
         <div class="image-column">
-            <img src="{image.link}" alt="{image.alt}" />
+            <img src=".{image.link}" alt="{image.alt}" />
         </div>
         <div class="text-column">
             <span>&gt;</span>

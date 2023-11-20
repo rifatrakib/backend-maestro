@@ -101,7 +101,7 @@
 
 <section class="event-container">
     <section class="event-header">
-        <img src="/icons/{eventData.type}.svg" alt="{`${eventData.type} icon`}" />
+        <img src="./icons/{eventData.type}.svg" alt="{`${eventData.type} icon`}" />
         <header>
             {eventData.header}
             <span>({eventData.subheaders.duration})</span>
@@ -113,13 +113,13 @@
             <div>
                 {#each Object.entries(eventData.subheaders) as [key, value]}
                     <p class="metadata">
-                        <span><img src="/icons/{key}.svg" alt="work icon" /></span>
+                        <span><img src="./icons/{key}.svg" alt="work icon" /></span>
                         <span>{value}</span>
                     </p>
                 {/each}
             </div>
             <p>
-                <span><img src="/icons/responsibilities.svg" alt="Icon" /></span>
+                <span><img src="./icons/responsibilities.svg" alt="Icon" /></span>
                 <span>Responsibilities I have undertaken in this role:</span>
             </p>
             <ul>
