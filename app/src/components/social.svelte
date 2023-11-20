@@ -1,14 +1,6 @@
 <script>
     export let data;
     export let isFooter = false;
-
-    let isHovered = false;
-    let iconUrl = data.logo;
-
-    function handleHover() {
-        isHovered = !isHovered;
-        iconUrl = isHovered ? `${data.logo.split(".svg")[0]}-hover.svg` : data.logo;
-    }
 </script>
 
 <style>
@@ -42,7 +34,7 @@
 </style>
 
 <button>
-    <a href="{data.link}" target="_blank" rel="noreferrer" on:mouseenter={handleHover} on:mouseleave={handleHover}>
-        <img class:hovering={!isFooter} src="{iconUrl}" alt="{data.alt}" />
+    <a href="{data.link}" target="_blank">
+        <img class:hovering={!isFooter} src="{data.logo}" alt="{data.alt}" />
     </a>
 </button>
