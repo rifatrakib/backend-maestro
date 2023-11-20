@@ -35,6 +35,6 @@
 
 <button>
     <a href="{data.link}" target="_blank">
-        <img class:hovering={!isFooter} src="{data.logo}" alt="{data.alt}" />
+        <img class:hovering={!isFooter} src=".{data.logo}" alt="{data.alt}" />
     </a>
 </button>

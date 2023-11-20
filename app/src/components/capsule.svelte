@@ -26,5 +26,5 @@
 </style>
 
 <div>
-    <img src="/icons/{name}.svg" alt="{name} logo" />
+    <img src="./icons/{name}.svg" alt="{name} logo" />
 </div>
