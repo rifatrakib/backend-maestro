@@ -16,7 +16,6 @@
         justify-content: center;
         width: 100%;
         padding: 1.5rem 0 3rem;
-        margin: 5rem auto 0;
         background-color: #202020;
         top: 0;
         position: sticky;

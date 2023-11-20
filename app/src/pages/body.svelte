@@ -1,9 +1,11 @@
 <script>
     import Home from './home/home.svelte';
     import About from './about/about.svelte';
-    import Contact from './contact/contact.svelte';
 
-    export let page;
+    export let currentPage;
+    export let pages;
+
+    $:if (currentPage) {window.scrollTo(0, 0)};
 </script>
 
 <style>
@@ -15,11 +17,9 @@
 </style>
 
 <div>
-    {#if page === 'Home'}
+    {#if currentPage === 'home'}
         <Home />
-    {:else if page === 'Work'}
-        <About />
-    {:else if page === 'Contact'}
-        <Contact />
+    {:else if pages.includes(currentPage)}
+        <About page={currentPage} />
     {/if}
 </div>

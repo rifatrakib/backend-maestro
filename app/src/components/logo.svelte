@@ -28,7 +28,7 @@
     }
 </style>
 
-<button on:click={() => dispatch('changePage', 'Home')}>
+<button on:click={() => dispatch('changePage', 'home')}>
     <span>Backend</span>
     <span class="separator">|</span>
     <span>Maestro</span>

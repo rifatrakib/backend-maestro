@@ -3,15 +3,24 @@
     import Body from './pages/body.svelte';
     import Footer from './pages/footer.svelte';
 
-    let page = 'Home';
-    const options = ['Home', 'Work', 'Contact'];
+    let currentPage = 'home';
+    const pages = ['home', 'work', 'academic', 'projects'];
 </script>
+
+<style>
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+</style>
 
 <main>
     <Navbar
-        options={options}
-        activePage={page}
-        on:changePage={(event) => page = event.detail} />
-    <Body page={page} />
+        options={pages}
+        activePage={currentPage}
+        on:changePage={(event) => currentPage = event.detail} />
+    <Body currentPage={currentPage} pages={pages} />
     <Footer />
 </main>
