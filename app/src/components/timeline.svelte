@@ -5,21 +5,24 @@
 </script>
 
 <style>
-    section {
+    section.experience-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+        margin: 0;
+        margin-top: 5rem;
+        border-radius: 10px;
+        background-color: #1c1c1c;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    section.experience {
         display: flex;
         flex-direction: row;
         gap: 1rem;
         margin-top: 1rem;
-    }
-
-    header {
-        flex: 0 0 20%;
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-align: left;
-        line-height: 2rem;
-        margin: 0;
-        padding: 0;
+        margin: 5rem;
     }
 
     div {
@@ -29,13 +32,14 @@
     }
 </style>
 
-<section>
+<section class="experience-container">
     {#each Object.entries(eventsData) as [type, events]}
-        <header>{`${type.charAt(0).toUpperCase()}${type.slice(1)} Experiences`}</header>
-        <div>
-            {#each events as event}
-                <Event eventData={event} />
-            {/each}
-        </div>
+        <section class="experience">
+            <div>
+                {#each events as event}
+                    <Event eventData={event} />
+                {/each}
+            </div>
+        </section>
     {/each}
 </section>

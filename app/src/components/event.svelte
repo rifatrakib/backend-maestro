@@ -13,10 +13,6 @@
         padding-left: 2rem;
     }
 
-    /* .event-container {
-        border-left: 2px solid #ffffff;
-    } */
-
     section.event-header {
         display: flex;
         flex-direction: row;
@@ -25,16 +21,24 @@
     }
 
     section.event-header img {
-        width: 2rem;
-        height: 2rem;
-        /* padding: 0 0 0 1rem; */
-        margin: 0 0 0 -1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: 0 0 0 -1.15rem;
     }
 
     header {
         font-size: 1.5rem;
         font-weight: 600;
         line-height: 1.2rem;
+    }
+
+    header span {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.2rem;
+        color: #ffffff90;
+        padding-left: 0.5rem;
+        font-style: italic;
     }
 
     section.event-details {
@@ -93,7 +97,10 @@
 <section class="event-container">
     <section class="event-header">
         <img src="/icons/{eventData.type}.svg" alt="work icon" />
-        <header>{eventData.header}</header>
+        <header>
+            {eventData.header}
+            <span>({eventData.subheaders.duration})</span>
+        </header>
     </section>
     <section class="event-details">
         <section class="divider"></section>
