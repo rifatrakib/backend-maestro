@@ -1,7 +1,7 @@
 <script>
-    import Event from './event.svelte';
+    import Event from '../../components/event.svelte';
 
-    export let eventsData;
+    export let events;
 </script>
 
 <style>
@@ -12,7 +12,7 @@
         padding: 0;
         margin: 0;
         margin-top: 5rem;
-        border-radius: 10px;
+        border-radius: 1rem;
         background-color: #1c1c1c;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }
@@ -22,24 +22,22 @@
         flex-direction: row;
         gap: 1rem;
         margin-top: 1rem;
-        margin: 5rem;
+        margin: 4rem 2rem;
     }
 
     div {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 0.5rem;
     }
 </style>
 
 <section class="experience-container">
-    {#each Object.entries(eventsData) as [type, events]}
-        <section class="experience">
-            <div>
-                {#each events as event}
-                    <Event eventData={event} />
-                {/each}
-            </div>
-        </section>
-    {/each}
+    <section class="experience">
+        <div>
+            {#each events as event}
+                <Event eventData={event} />
+            {/each}
+        </div>
+    </section>
 </section>
