@@ -1,5 +1,14 @@
 <script>
     export let data;
+    export let isFooter = false;
+
+    let isHovered = false;
+    let iconUrl = data.logo;
+
+    function handleHover() {
+        isHovered = !isHovered;
+        iconUrl = isHovered ? `${data.logo.split(".svg")[0]}-hover.svg` : data.logo;
+    }
 </script>
 
 <style>
@@ -27,13 +36,13 @@
         border: 0px solid transparent;
     }
 
-    img:hover {
+    img.hovering:hover {
         transform: scale(1.2);
     }
 </style>
 
 <button>
-    <a href="{data.link}" target="_blank" rel="noreferrer">
-        <img src="{data.logo}" alt="{data.alt}" />
+    <a href="{data.link}" target="_blank" rel="noreferrer" on:mouseenter={handleHover} on:mouseleave={handleHover}>
+        <img class:hovering={!isFooter} src="{iconUrl}" alt="{data.alt}" />
     </a>
 </button>
