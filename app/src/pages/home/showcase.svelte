@@ -12,7 +12,7 @@
 <style>
     h2 {
         font-family: monospace;
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin-bottom: 2rem;
     }

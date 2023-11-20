@@ -54,7 +54,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 50px auto;
+        margin: 3rem auto 6rem;
+        background-color: #1c1c1c;
+        border-radius: 10px;
+        padding: 3rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }
 
     .card {

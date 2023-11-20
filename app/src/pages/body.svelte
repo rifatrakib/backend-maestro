@@ -17,7 +17,7 @@
 <div>
     {#if page === 'Home'}
         <Home />
-    {:else if page === 'About'}
+    {:else if page === 'Work'}
         <About />
     {:else if page === 'Contact'}
         <Contact />

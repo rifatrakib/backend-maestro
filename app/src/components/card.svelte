@@ -2,24 +2,14 @@
     export let icon;
     export let title;
     export let description;
-
-    let isHovered = false;
-    let iconUrl = icon;
-
-    function handleHover() {
-        isHovered = !isHovered;
-        iconUrl = isHovered ? `${icon.split(".svg")[0]}-hover.svg` : icon;
-    }
 </script>
 
 <style>
     div.card {
-        color: #105043;
         display: flex;
         flex-direction: column;
         text-align: left;
         border-radius: 20px;
-        background-color: #ffffffcf;
         gap: 0.5rem;
         padding: 2.5rem;
         box-sizing: border-box;
@@ -28,9 +18,7 @@
 
     div.card:hover {
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-        background-color: #000000cf;
-        color: #ffffff90;
-        transform: scale(1.075);
+        background-color: #1c1c1c;
     }
 
     img {
@@ -47,11 +35,12 @@
         font-size: 1.2rem;
         font-weight: 500;
         text-align: justify;
+        color: #ffffff90;
     }
 </style>
 
-<div class="card" role="button" aria-label="Card" tabindex="0" on:focus={() => {}} on:mouseenter={handleHover} on:mouseleave={handleHover}>
-    <img src={iconUrl} alt="{`${icon} icon`}" class="icon" />
+<div class="card">
+    <img src={`${icon.split(".svg")[0]}-hover.svg`} alt="{`${icon} icon`}" class="icon" />
     <h3>{title}</h3>
     <p>{description}</p>
 </div>
