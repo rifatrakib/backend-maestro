@@ -40,7 +40,7 @@
 </style>
 
 <div class="card">
-    <img src={`${icon.split(".svg")[0]}-hover.svg`} alt="{`${icon} icon`}" class="icon" />
+    <img src={`${icon.split(".svg")[0]}.svg`} alt="{`${icon} icon`}" class="icon" />
     <h3>{title}</h3>
     <p>{description}</p>
 </div>

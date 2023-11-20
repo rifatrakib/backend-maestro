@@ -10,7 +10,12 @@
         justify-content: center;
         text-align: left;
         gap: 1rem;
-        padding-left: 2rem;
+        padding: 1rem 3rem;
+    }
+
+    section.event-container:hover {
+        background-color: #ffffff10;
+        border-radius: 1rem;
     }
 
     section.event-header {
@@ -96,7 +101,7 @@
 
 <section class="event-container">
     <section class="event-header">
-        <img src="/icons/{eventData.type}.svg" alt="work icon" />
+        <img src="/icons/{eventData.type}.svg" alt="{`${eventData.type} icon`}" />
         <header>
             {eventData.header}
             <span>({eventData.subheaders.duration})</span>

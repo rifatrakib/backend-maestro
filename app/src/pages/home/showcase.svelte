@@ -10,7 +10,11 @@
 </script>
 
 <style>
-    h2 {
+    section.showcase {
+        margin: 3rem auto 6rem;
+    }
+
+    header {
         font-family: monospace;
         font-size: 2.5rem;
         font-weight: 700;
@@ -26,8 +30,8 @@
     }
 </style>
 
-<section>
-    <h2>Area of Experiences</h2>
+<section class="showcase">
+    <header>Areas of experience</header>
     <section class="card-container">
         {#each data as { icon, title, description }}
             <Card icon={icon} title={title} description={description} />

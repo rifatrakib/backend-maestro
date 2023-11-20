@@ -10,24 +10,24 @@
 </script>
 
 <style>
-    h2 {
+    header {
         font-family: monospace;
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin-bottom: 2rem;
     }
 
     section.logos {
         display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(16, 1fr);
+        gap: 2rem;
+        grid-template-columns: repeat(8, 1fr);
         justify-content: space-evenly;
         margin-bottom: 10rem;
     }
 </style>
 
 <section>
-    <h2>My Toolbox</h2>
+    <header>Toolbox</header>
     <section class="logos">
         {#each tools as tool}
             <Capsule name={tool} />

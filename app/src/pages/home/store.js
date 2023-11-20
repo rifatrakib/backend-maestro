@@ -48,6 +48,6 @@ export const showcaseStore = readable([
 ]);
 
 export const toolsStore = readable([
-    'Python', 'NodeJS', 'Docker', 'AWS', 'Elastic', 'Terraform', 'Git', 'GitHub',
-    'PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'InfluxDB', 'Svelte', 'D3JS', 'Go',
+    'python', 'nodejs', 'docker', 'aws', 'elastic', 'terraform', 'git', 'github',
+    'postgresql', 'mongodb', 'mysql', 'redis', 'influxdb', 'svelte', 'd3js', 'go',
 ]);
