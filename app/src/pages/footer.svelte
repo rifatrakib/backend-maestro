@@ -50,7 +50,7 @@
     <section class="footer-container">
         <section class="footer-links">
             {#each pages as page}
-                <Social data={page} isFooter={true} />
+                <Social data={page} />
             {/each}
         </section>
         <section class="footer-license">
