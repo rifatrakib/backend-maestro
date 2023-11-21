@@ -6,10 +6,11 @@
 
 <style>
     section.experience-container {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        padding: 0;
+        padding: 4rem 2rem;
         margin: 0;
         margin-top: 5rem;
         border-radius: 1rem;
@@ -21,11 +22,10 @@
         display: flex;
         flex-direction: row;
         gap: 1rem;
-        margin-top: 1rem;
-        margin: 4rem 2rem;
     }
 
     div {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
