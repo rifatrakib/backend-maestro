@@ -10,7 +10,7 @@
 
 <style>
     div {
-        max-width: 75%;
+        width: 75%;
         margin: 0 auto;
         text-align: center;
     }
