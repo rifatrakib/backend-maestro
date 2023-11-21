@@ -1,6 +1,5 @@
 <script>
     export let data;
-    export let isFooter = false;
 </script>
 
 <style>
@@ -15,6 +14,10 @@
         background-color: transparent;
     }
 
+    button:hover {
+        transform: scale(1.2);
+    }
+
     a {
         display: flex;
         justify-content: center;
@@ -27,14 +30,10 @@
         height: 40px;
         border: 0px solid transparent;
     }
-
-    img.hovering:hover {
-        transform: scale(1.2);
-    }
 </style>
 
 <button>
     <a href="{data.link}" target="_blank">
-        <img class:hovering={!isFooter} src=".{data.logo}" alt="{data.alt}" />
+        <img src=".{data.logo}" alt="{data.alt}" />
     </a>
 </button>
