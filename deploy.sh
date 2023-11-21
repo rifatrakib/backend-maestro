@@ -1,10 +1,26 @@
 #!/bin/bash
-cd app&&npm run build
 
+# Change to the app directory
+cd app
+
+# Run npm build
+npm run build
+
+# add relative path to assets
+sed -i 's/src="\/assets/src=".\/assets/g' dist/index.html
+sed -i 's/href="\/assets/href=".\/assets/g' dist/index.html
+
+# Get the JavaScript file name in the dist directory
+js_file=$(find dist -type f -name "index-*.js")
+
+# Extract the JavaScript file name
+js_file_name=$(basename "$js_file")
+
+sed -i 's/\/icons/.\/backend-maestro\/icons/g' "$js_file"
+sed -i 's/\/socials/.\/backend-maestro\/socials/g' "$js_file"
+
+# Change back to the parent directory
 cd ..
-sed -i 's/src="\/assets/src=".\/assets/g' app/dist/index.html
-sed -i 's/href="\/assets/href=".\/assets/g' app/dist/index.html
-sed -i 's/\/icons/.\/backend-maestro\/icons/g' app/dist/assets/index-fd91dffb.js
-sed -i 's/\/socials/.\/backend-maestro\/socials/g' app/dist/assets/index-fd91dffb.js
 
+# Perform the git subtree push
 git subtree push --prefix app/dist origin gh-pages
