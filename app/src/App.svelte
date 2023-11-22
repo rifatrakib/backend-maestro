@@ -4,7 +4,7 @@
     import Footer from './pages/footer.svelte';
 
     let currentPage = 'home';
-    const pages = ['home', 'work', 'academic', 'projects'];
+    const pages = ['home', 'work', 'education', 'projects'];
 </script>
 
 <style>
