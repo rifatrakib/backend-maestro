@@ -35,7 +35,7 @@ export const eventsStore = readable({
             ],
         },
     ],
-    academic: [
+    education: [
         {
             type: 'academic',
             header: 'Yangzhou University',
@@ -52,4 +52,20 @@ export const eventsStore = readable({
             ],
         },
     ],
+    projects: [],
+});
+
+export const infocardStore = readable({
+    work: {
+        header: 'Discover Expertise',
+        text: 'Dive into my professional journey — a fusion of Python mastery, microservices finesse, and precise AWS deployment. Uncover the art of optimizing databases and crafting innovative data analytics solutions. As a former Web Developer Intern, I bring a holistic perspective. Explore the details and witness a commitment to excellence in every professional step.',
+    },
+    education: {
+        header: 'Unlocking Knowledge',
+        text: "Embark on a journey through my academic exploration, where passion for Software Engineering merges with dedication. Beyond grades, it's a brief glimpse into an inspiring educational odyssey. Join me in uncovering the narrative of intellectual curiosity.",
+    },
+    projects: {
+        header: 'Project Showcase',
+        text: 'Dive into my projects—a blend of innovation and hands-on expertise. From dynamic API servers to intricate drone designs, each narrates a story of creative problem-solving. Join me in exploring this curated collection, showcasing a commitment to pushing technological boundaries.',
+    }
 });

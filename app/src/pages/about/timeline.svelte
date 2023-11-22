@@ -10,12 +10,13 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        padding: 4rem 2rem;
+        padding: 2rem;
         margin: 0;
-        margin-top: 5rem;
+        margin-top: 2rem;
         border-radius: 1rem;
         background-color: #1c1c1c;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
     }
 
     section.experience {

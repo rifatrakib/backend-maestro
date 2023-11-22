@@ -51,3 +51,8 @@ export const toolsStore = readable([
     'python', 'nodejs', 'docker', 'aws', 'elastic', 'terraform', 'git', 'github',
     'postgresql', 'mongodb', 'mysql', 'redis', 'influxdb', 'svelte', 'd3js', 'go',
 ]);
+
+export const infocardStore = readable({
+    header: 'Who am I?',
+    text: 'As a skilled backend developer, I possess strong proficiency in Python web development, AWS, ELK, Docker, SQL & NoSQL databases, Terraform, and other relevant technologies for modern web application development. With experience in designing and implementing scalable backend systems, RESTful APIs, and microservices architecture to build and maintain data-intensive web applications, I have a proven record of accomplishment of delivering high-quality software solutions. My dedication to staying up to date with emerging technologies and industry trends ensures that I am always equipped to provide valuable contributions to any development team. I am committed to delivering exceptional results and am passionate about collaborating with cross-functional teams to achieve common goals.',
+});
