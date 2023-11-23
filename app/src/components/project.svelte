@@ -1,4 +1,6 @@
 <script>
+    import Button from './button.svelte';
+
     export let project;
 </script>
 
@@ -50,6 +52,13 @@
         margin-bottom: 0.5rem;
         text-align: justify;
     }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 </style>
 
 <section>
@@ -63,4 +72,7 @@
             <li>{point}</li>
         {/each}
     </ul>
+    <div>
+        <Button label="view" hasIcon={true} link={project.link} />
+    </div>
 </section>

@@ -25,6 +25,7 @@ export const eventsStore = readable({
                     name: "Project 1",
                     objective: "Objective 1",
                     duration: "Duration 1",
+                    link: "https://www.google.com",
                     points: [
                         "Point 1",
                         "Point 2",
@@ -35,6 +36,7 @@ export const eventsStore = readable({
                     name: "Project 2",
                     objective: "Objective 2",
                     duration: "Duration 2",
+                    link: "https://www.google.com",
                     points: [
                         "Point 1",
                         "Point 2",
