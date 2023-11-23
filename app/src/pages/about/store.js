@@ -20,6 +20,28 @@ export const eventsStore = readable({
                 'Participated in designing application infrastructure and deploying a comprehensive, highly available, and scalable hybrid microservices-based backend system on AWS that delivered reduced data loss and robust disaster recovery capabilities.',
                 'Deployed MySQL databases on AWS RDS, utilizing read replicas and an RDS proxy to reduce database operations and significantly enhance system performance.',
             ],
+            projects: [
+                {
+                    name: "Project 1",
+                    objective: "Objective 1",
+                    duration: "Duration 1",
+                    points: [
+                        "Point 1",
+                        "Point 2",
+                        "Point 3"
+                    ],
+                },
+                {
+                    name: "Project 2",
+                    objective: "Objective 2",
+                    duration: "Duration 2",
+                    points: [
+                        "Point 1",
+                        "Point 2",
+                        "Point 3"
+                    ],
+                },
+            ]
         },
         {
             type: 'internship',

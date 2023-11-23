@@ -25,7 +25,7 @@
         max-width: 20%;
     }
 
-    h3 {
+    header {
         font-family: monospace;
         font-size: 1.5rem;
         font-weight: 700;
@@ -41,6 +41,6 @@
 
 <div class="card">
     <img src=".{`${icon.split(".svg")[0]}.svg`}" alt="{`${icon} icon`}" class="icon" />
-    <h3>{title}</h3>
+    <header>{title}</header>
     <p>{description}</p>
 </div>

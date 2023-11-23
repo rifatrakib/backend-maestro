@@ -1,4 +1,6 @@
 <script>
+    import Project from "./project.svelte";
+
     export let eventData;
 </script>
 
@@ -47,6 +49,7 @@
     }
 
     section.event-details {
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -59,6 +62,7 @@
     }
 
     section.event {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -97,6 +101,19 @@
         margin-bottom: 0.5rem;
         text-align: justify;
     }
+
+    section.project-container {
+        width: 100%;
+        padding: 0 0 0 2.5rem;
+        box-sizing: border-box;
+    }
+
+    section.project {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 </style>
 
 <section class="event-container">
@@ -127,6 +144,19 @@
                     <li>{point}</li>
                 {/each}
             </ul>
+            {#if eventData.projects && eventData.projects.length > 0}
+                <p>
+                    <span><img src="./icons/project.svg" alt="Icon" /></span>
+                    <span>Projects that I have led or worked on while in this role:</span>
+                </p>
+                <section class="project-container">
+                    <section class="project">
+                        {#each eventData.projects as project}
+                            <Project project={project} />
+                        {/each}
+                    </section>
+                </section>
+            {/if}
         </section>
     </section>
 </section>
