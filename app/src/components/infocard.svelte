@@ -8,7 +8,6 @@
 
     const align = isCommonText ? 'justify' : 'center';
     const placement = isCommonText ? 'infobox' : 'subtitle infobox';
-
 </script>
 
 <Header text={header} isSectionHeader={true} />

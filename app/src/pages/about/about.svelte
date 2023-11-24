@@ -19,38 +19,31 @@
 </script>
 
 <style>
-    article {
+    section.container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 1rem;
-        padding-bottom: 5rem;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 2rem;
+        margin: 5rem auto;
     }
 
-    section.infocard-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin: 2rem auto;
+    section.infocard {
+        margin-top: 1rem;
     }
 
-    article div {
+    div {
         text-align: center;
         font-size: 1.25rem;
     }
 </style>
 
-<article>
-    {#if events[page] && events[page].length > 0}
-        <section class="infocard-container">
-            <Infocard header={infocard[page].header} text={infocard[page].text} />
-        </section>
-        <Timeline events={events[page]} />
-    {:else}
-        <div>No data available for this section.</div>
-    {/if}
-</article>
+
+{#if events[page] && events[page].length > 0}
+    <section class="container infocard">
+        <Infocard header={infocard[page].header} text={infocard[page].text} />
+    </section>
+    <Timeline events={events[page]} />
+{:else}
+    <div>No data available for this section.</div>
+{/if}

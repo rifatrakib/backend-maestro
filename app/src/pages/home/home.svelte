@@ -17,7 +17,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items:stretch;
+        align-items: stretch;
         gap: 2rem;
         margin: 5rem auto;
     }
@@ -32,17 +32,15 @@
     }
 </style>
 
-<article>
-    <section class="container hero">
-        <Hero />
-    </section>
-    <section class="container infocard">
-        <Infocard header={data.header} text={data.text} isCommonText={true} />
-    </section>
-    <section class="container showcase">
-        <Showcase />
-    </section>
-    <section class="container toolbox">
-        <Toolbox />
-    </section>
-</article>
+<section class="container hero">
+    <Hero />
+</section>
+<section class="container infocard">
+    <Infocard header={data.header} text={data.text} isCommonText={true} />
+</section>
+<section class="container showcase">
+    <Showcase />
+</section>
+<section class="container toolbox">
+    <Toolbox />
+</section>

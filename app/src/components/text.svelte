@@ -50,7 +50,7 @@
     }
 
     p.subtitle {
-        padding: 1rem 10%;
+        padding: 0 10%;
     }
 </style>
 
