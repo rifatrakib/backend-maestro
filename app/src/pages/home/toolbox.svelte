@@ -16,7 +16,6 @@
         gap: 2rem;
         grid-template-columns: repeat(8, 1fr);
         justify-content: space-evenly;
-        margin-bottom: 5rem;
     }
 </style>
 
