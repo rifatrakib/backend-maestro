@@ -13,15 +13,6 @@
 </script>
 
 <style>
-    section.container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: stretch;
-        gap: 2rem;
-        margin: 5rem auto;
-    }
-
     section.hero {
         align-items: center;
         margin-top: 2rem;
