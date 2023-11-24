@@ -26,7 +26,7 @@
 <article>
     <Hero />
     <section class="container infocard">
-        <Infocard header={data.header} text={data.text}  />
+        <Infocard header={data.header} text={data.text} isCommonText={true} />
     </section>
     <section class="container showcase">
         <Showcase />

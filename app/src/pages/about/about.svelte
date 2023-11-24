@@ -47,7 +47,7 @@
 <article>
     {#if events[page] && events[page].length > 0}
         <section class="infocard-container">
-            <Infocard header={infocard[page].header} text={infocard[page].text} isPageSubtitle={true} />
+            <Infocard header={infocard[page].header} text={infocard[page].text} />
         </section>
         <Timeline events={events[page]} />
     {:else}
