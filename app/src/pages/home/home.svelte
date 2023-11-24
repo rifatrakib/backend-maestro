@@ -38,7 +38,9 @@
     <section class="infocard-container">
         <Infocard header={data.header} text={data.text}  />
     </section>
-    <Showcase />
+    <section class="container showcase">
+        <Showcase />
+    </section>
     <section class="container toolbox">
         <Toolbox />
     </section>
