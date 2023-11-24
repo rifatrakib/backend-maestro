@@ -1,6 +1,7 @@
 <script>
     import { onDestroy } from 'svelte';
-    import Capsule from '../../components/capsule.svelte';
+    import Header from '../../components/header.svelte';
+    import Icon from '../../components/icon.svelte';
     import { toolsStore } from './store.js';
 
     let tools;
@@ -10,13 +11,6 @@
 </script>
 
 <style>
-    header {
-        font-family: monospace;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-    }
-
     section.logos {
         display: grid;
         gap: 2rem;
@@ -26,11 +20,9 @@
     }
 </style>
 
-<section>
-    <header>Toolbox</header>
-    <section class="logos">
-        {#each tools as tool}
-            <Capsule name={tool} />
-        {/each}
-    </section>
+<Header text={'Toolbox'} isSectionHeader={true} />
+<section class="logos">
+    {#each tools as tool}
+        <Icon icon={tool} />
+    {/each}
 </section>

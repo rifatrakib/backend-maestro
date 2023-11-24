@@ -1,0 +1,37 @@
+<script>
+    export let text;
+    export let subText = null;
+    export let isSectionHeader;
+</script>
+
+<style>
+    header {
+        font-family: monospace;
+    }
+
+    header.section-header {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    header:not(.section-header) {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    header span {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.2rem;
+        color: #ffffff90;
+        padding-left: 0.5rem;
+        font-style: italic;
+    }
+</style>
+
+<header class:section-header={isSectionHeader}>
+    {text}
+    {#if subText}
+        <span>{subText}</span>
+    {/if}
+</header>
