@@ -3,6 +3,7 @@
     export let size;
     export let color = "primary";
     export let align = "left";
+    export let isInfobox = false;
 
     const sizeClass = size.toString().replace(".", "_");
 </script>
@@ -37,6 +38,14 @@
     p.align-justify {
         text-align: justify;
     }
+
+    p.infobox {
+        font-weight: 300;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
 </style>
 
-<p class="size-{sizeClass} color-{color} align-{align}">{text}</p>
+<p class="size-{sizeClass} color-{color} align-{align}" class:infobox={isInfobox}>
+    {text}
+</p>

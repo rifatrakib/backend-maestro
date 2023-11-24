@@ -1,17 +1,13 @@
 <script>
+    import Header from './header.svelte';
+    import Text from './text.svelte';
+
     export let header;
     export let text;
     export let isPageSubtitle = false;
 </script>
 
 <style>
-    header {
-        font-family: monospace;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-    }
-
     section.infocard-text {
         margin: 0;
         border-radius: 20px;
@@ -27,11 +23,7 @@
     }
 
     section:not(.subtitle) {
-        padding: 3rem;
-        font-weight: 300;
-        font-size: 1.2rem;
-        line-height: 2rem;
-        text-align: justify;
+        padding: 2.5rem;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }
 
@@ -41,7 +33,7 @@
     }
 </style>
 
-<header>{header}</header>
+<Header text={header} isSectionHeader={true} />
 <section class="infocard-text" class:subtitle={isPageSubtitle}>
-    <p>{text}</p>
+    <Text text={text} size={1.2} align={'justify'} isInfobox={true} />
 </section>

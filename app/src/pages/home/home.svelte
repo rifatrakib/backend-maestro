@@ -21,21 +21,11 @@
         gap: 2rem;
         margin: 5rem auto;
     }
-
-    section.infocard-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        margin: 3rem auto 6rem;
-    }
 </style>
 
 <article>
     <Hero />
-    <section class="infocard-container">
+    <section class="container infocard">
         <Infocard header={data.header} text={data.text}  />
     </section>
     <section class="container showcase">
