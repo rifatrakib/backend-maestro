@@ -21,10 +21,21 @@
         gap: 2rem;
         margin: 5rem auto;
     }
+
+    section.hero {
+        align-items: center;
+        margin-top: 2rem;
+        background-color: #1c1c1c;
+        border-radius: 1rem;
+        padding: 2rem 3rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    }
 </style>
 
 <article>
-    <Hero />
+    <section class="container hero">
+        <Hero />
+    </section>
     <section class="container infocard">
         <Infocard header={data.header} text={data.text} isCommonText={true} />
     </section>
