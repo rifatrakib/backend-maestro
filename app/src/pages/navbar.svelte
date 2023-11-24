@@ -1,7 +1,6 @@
 <script>
     import { createEventDispatcher, onDestroy } from 'svelte';
     import Button from '../components/button.svelte';
-    import Logo from '../components/logo.svelte';
     import Social from '../components/social.svelte';
     import { navStore } from './store.js';
 
@@ -39,11 +38,10 @@
         margin: inherit;
         text-align: center;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     nav section.nav-buttons {
-        width: 20%;
         margin: inherit;
         display: flex;
         justify-content: space-evenly;
@@ -59,7 +57,7 @@
 
 <div>
     <nav>
-        <Logo on:changePage />
+        <Button label='home' isLogo={true} on:changePage />
         <section class="nav-buttons">
             {#each options as option}
                 <Button

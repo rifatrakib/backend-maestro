@@ -4,24 +4,46 @@
     const dispatch = createEventDispatcher();
 
     export let label;
-    export let isActive = false;
-    export let hasIcon = false;
+    export let icon = null;
     export let link = null;
+    export let isActive = false;
+    export let isLogo = false;
 
-    let buttonLabel = `${label.charAt(0).toUpperCase()}${label.slice(1)}`
+    let buttonLabel = `${label.charAt(0).toUpperCase()}${label.slice(1)}`;
+
+    const changePage = () => dispatch('changePage', label);
 </script>
 
 <style>
     button {
-        border-radius: 8px;
         border: 1px solid transparent;
         font-size: 1.2rem;
         font-weight: 700;
         font-family: inherit;
         background-color: transparent;
         cursor: pointer;
-        transition: border-color 0.75s;
         user-select: none;
+    }
+
+    button:not(.logo) {
+        border-radius: 8px;
+        transition: border-color 0.75s;
+    }
+
+    button.logo {
+        padding: 0 1.2em 0 0;
+        letter-spacing: 0.1em;
+        font-size: 1.3em;
+    }
+
+    button.logo span:first-child {
+        color: #1abc9c;
+    }
+
+    button.logo span.separator {
+        margin: 0;
+        font-weight: bold;
+        color: #1abc9c;
     }
 
     button.has-icon {
@@ -37,12 +59,12 @@
         background-color: #105043;
     }
 
-    button:not(.has-icon) {
+    button:not(.has-icon):not(.logo) {
         padding: 0.6em 1.2em;
         margin: 1em;
     }
 
-    button:not(:disabled):not(.has-icon):hover {
+    button:not(:disabled):not(.logo):not(.has-icon):hover {
         border-color: #1abc9c;
     }
 
@@ -56,17 +78,19 @@
     }
 </style>
 
-{#if hasIcon}
+{#if isLogo}
+    <button class="logo" on:click={changePage}>
+        <span>Backend</span>
+        <span class="separator">|</span>
+        <span>Maestro</span>
+    </button>
+{:else if icon}
     <a href="{link}" target="_blank" rel="noreferrer">
         <button class="has-icon">
             {buttonLabel}
-            <img src="/icons/link.svg" alt="link" />
+            <img src="{icon}" alt="link" />
         </button>
     </a>
 {:else}
-    <button
-        disabled={isActive}
-        class:active={isActive}
-        on:click={() => dispatch('changePage', label)}
-    >{buttonLabel}</button>
+    <button disabled={isActive} class:active={isActive} on:click={changePage}>{buttonLabel}</button>
 {/if}
