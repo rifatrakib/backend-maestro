@@ -2,6 +2,7 @@
 
 # checkout to master branch
 git checkout master
+git pull
 
 # Change to the app directory
 cd app
