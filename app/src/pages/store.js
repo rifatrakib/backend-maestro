@@ -2,17 +2,17 @@ import { readable } from 'svelte/store';
 
 export const navStore = readable([
     {
-        logo: '/socials/github.svg',
+        logo: './icons/github-nav.svg',
         alt: 'GitHub Logo',
         link: 'https://github.com/rifatrakib',
     },
     {
-        logo: '/socials/linkedin.svg',
+        logo: './icons/linkedin-nav.svg',
         alt: 'LinkedIn Logo',
         link: 'https://www.linkedin.com/in/md-abdur-rakib-1508/',
     },
     {
-        logo: '/socials/mailbox.svg',
+        logo: './icons/mailbox-nav.svg',
         alt: 'Mail Logo',
         link: 'mailto:abdur.rakib.1508@gmail.com',
     },

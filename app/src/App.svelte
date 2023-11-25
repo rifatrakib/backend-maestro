@@ -1,4 +1,5 @@
 <script>
+    import { Svrollbar } from 'svrollbar';
     import Navbar from './pages/navbar.svelte';
     import Body from './pages/body.svelte';
     import Footer from './pages/footer.svelte';
@@ -14,6 +15,10 @@
         justify-content: space-between;
         height: 100%;
     }
+
+    section.scroll-bar {
+        z-index: 20;
+    }
 </style>
 
 <main>
@@ -21,6 +26,9 @@
         options={pages}
         activePage={currentPage}
         on:changePage={(event) => currentPage = event.detail} />
+    <section class="scroll-bar">
+        <Svrollbar />
+    </section>
     <Body currentPage={currentPage} pages={pages} />
     <Footer />
 </main>

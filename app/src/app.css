@@ -55,3 +55,7 @@ section.container {
     gap: 2rem;
     margin: 5rem auto;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
