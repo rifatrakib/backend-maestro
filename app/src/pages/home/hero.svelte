@@ -50,24 +50,17 @@
 </script>
 
 <style>
-    .card-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 3rem auto 6rem;
-        background-color: #1c1c1c;
-        border-radius: 10px;
-        padding: 3rem;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-    }
-
     .card {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: calc(100% - 20px);
+        width: 100%;
         box-sizing: border-box;
         gap: 5rem;
+        font-family: monospace;
+        color: #ffffff;
+        text-align: left;
+        margin: 0;
     }
 
     .image-column {
@@ -78,6 +71,8 @@
         display: flex;
         flex-direction: row;
         flex: 1;
+        font-size: 1.5rem;
+        font-weight: 300;
     }
 
     img {
@@ -85,35 +80,22 @@
         height: auto;
     }
 
-    p {
-        font-size: 1.75rem;
-        font-weight: 500;
-        font-family: Consolas;
-        color: #ffffff;
-        margin: 0;
-        text-align: left;
-    }
-
     .text-column span {
-        font-size: 1.75rem;
-        font-weight: 900;
-        font-family: Consolas;
-        color: #ffffff;
-        margin: 0;
-        text-align: left;
         padding-right: 10px;
         margin-top: -2px;
     }
+
+    .hidden {
+        visibility: hidden;
+    }
 </style>
 
-<div class="card-container">
-    <div class="card">
-        <div class="image-column">
-            <img src=".{image.link}" alt="{image.alt}" />
-        </div>
-        <div class="text-column">
-            <span>&gt;</span>
-            <p>{animatedText}<span style="visibility: {cursorVisible ? 'visible' : 'hidden'}">_</span></p>
-        </div>
-    </div>
-</div>
+<section class="card">
+    <section class="image-column">
+        <img src=".{image.link}" alt="{image.alt}" />
+    </section>
+    <section class="text-column">
+        <span>&gt;</span>
+        <p>{animatedText}<span class:hidden={!cursorVisible}>_</span></p>
+    </section>
+</section>

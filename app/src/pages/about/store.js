@@ -3,13 +3,23 @@ import { readable } from 'svelte/store';
 export const eventsStore = readable({
     work: [
         {
-            type: 'work',
-            header: 'Softwrd Ltd',
-            subheaders: {
-                positiion: 'Backend Engineer',
-                location: 'Dhaka, Bangladesh',
-                duration: 'Aug 2021 - Present',
-            },
+            icon: './icons/work.svg',
+            name: 'Softwrd Ltd',
+            duration: 'Aug 2021 - Present',
+            subheaders: [
+                {
+                    icon: './icons/position.svg',
+                    text: 'Backend Engineer',
+                },
+                {
+                    icon: './icons/location.svg',
+                    text: 'Dhaka, Bangladesh',
+                },
+                {
+                    icon: './icons/duration.svg',
+                    text: 'Aug 2021 - Present',
+                },
+            ],
             points: [
                 'Built Python API servers using a microservice architecture with an OAuth2 authentication gateway for secure access, emphasizing scalable solutions.',
                 'Provisioned AWS ECS clusters and services with Terraform and automated application deployment with GitHub Actions in Docker containers with ELK logging & monitoring maintaining TDD.',
@@ -22,37 +32,71 @@ export const eventsStore = readable({
             ],
             projects: [
                 {
-                    name: "Project 1",
-                    objective: "Objective 1",
-                    duration: "Duration 1",
-                    link: "https://www.google.com",
+                    icon: './icons/work.svg',
+                    name: 'Softwrd Ltd',
+                    duration: 'Aug 2021 - Present',
+                    subheaders: [
+                        {
+                            icon: './icons/position.svg',
+                            text: 'Backend Engineer',
+                        },
+                        {
+                            icon: './icons/location.svg',
+                            text: 'Dhaka, Bangladesh',
+                        },
+                        {
+                            icon: './icons/duration.svg',
+                            text: 'Aug 2021 - Present',
+                        },
+                    ],
                     points: [
-                        "Point 1",
-                        "Point 2",
-                        "Point 3"
+                        'Built Python API servers using a microservice architecture with an OAuth2 authentication gateway for secure access, emphasizing scalable solutions.',
+                        'Provisioned AWS ECS clusters and services with Terraform and automated application deployment with GitHub Actions in Docker containers with ELK logging & monitoring maintaining TDD.',
                     ],
                 },
                 {
-                    name: "Project 2",
-                    objective: "Objective 2",
-                    duration: "Duration 2",
-                    link: "https://www.google.com",
+                    icon: './icons/work.svg',
+                    name: 'Softwrd Ltd',
+                    duration: 'Aug 2021 - Present',
+                    subheaders: [
+                        {
+                            icon: './icons/position.svg',
+                            text: 'Backend Engineer',
+                        },
+                        {
+                            icon: './icons/location.svg',
+                            text: 'Dhaka, Bangladesh',
+                        },
+                        {
+                            icon: './icons/duration.svg',
+                            text: 'Aug 2021 - Present',
+                        },
+                    ],
                     points: [
-                        "Point 1",
-                        "Point 2",
-                        "Point 3"
+                        'Participated in designing application infrastructure and deploying a comprehensive, highly available, and scalable hybrid microservices-based backend system on AWS that delivered reduced data loss and robust disaster recovery capabilities.',
+                        'Deployed MySQL databases on AWS RDS, utilizing read replicas and an RDS proxy to reduce database operations and significantly enhance system performance.',
                     ],
                 },
-            ]
+            ],
         },
         {
-            type: 'internship',
-            header: 'Focus International Inc',
-            subheaders: {
-                positiion: 'Web Developer (Intern)',
-                location: 'Yangzhou, Jiangsu, China',
-                duration: 'Sep 2019 - Nov 2019',
-            },
+            icon: './icons/internship.svg',
+            name: 'Focus International Inc',
+            duration: 'Sep 2019 - Nov 2019',
+            subheaders: [
+                {
+                    icon: './icons/position.svg',
+                    text: 'Web Developer (Intern)',
+                },
+                {
+                    icon: './icons/location.svg',
+                    text: 'Yangzhou, Jiangsu, China',
+                },
+                {
+                    icon: './icons/duration.svg',
+                    text: 'Sep 2019 - Nov 2019',
+                },
+            ],
             points: [
                 'Built the frontend of the company website using HTML, CSS, & JavaScript.',
                 'Get familiar with web server technologies and deployment of websites and databases in the cloud.',
@@ -61,13 +105,23 @@ export const eventsStore = readable({
     ],
     education: [
         {
-            type: 'academic',
-            header: 'Yangzhou University',
-            subheaders: {
-                positiion: 'Undergraduate Student',
-                location: 'Yangzhou, Jiangsu, China',
-                duration: 'Sep 2017 - Sep 2021',
-            },
+            icon: './icons/academic.svg',
+            name: 'Yangzhou University',
+            duration: 'Sep 2017 - Sep 2021',
+            subheaders: [
+                {
+                    icon: './icons/position.svg',
+                    text: 'Undergraduate Student',
+                },
+                {
+                    icon: './icons/location.svg',
+                    text: 'Yangzhou, Jiangsu, China',
+                },
+                {
+                    icon: './icons/duration.svg',
+                    text: 'Sep 2017 - Sep 2021',
+                },
+            ],
             points: [
                 'Graduated with a CGPA of 4.4 out of 5.0 (scored 93.7%).',
                 'Multiple awards for academic excellence.',
