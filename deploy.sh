@@ -22,8 +22,4 @@ sed -i 's/\/icons/.\/backend-maestro\/icons/g' "$js_file"
 cd ..
 
 # Perform the git subtree push
-git add .
-timestamp=$(date +"%Y-%m-%d %T")
-git commit -m "Deploy to gh-pages at $timestamp"
-git push -f
 git subtree push --prefix app/dist origin gh-pages
