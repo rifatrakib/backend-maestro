@@ -34,6 +34,6 @@
 
 <button>
     <a href="{data.link}" target="_blank">
-        <img src=".{data.logo}" alt="{data.alt}" />
+        <img src="{data.logo}" alt="{data.alt}" />
     </a>
 </button>

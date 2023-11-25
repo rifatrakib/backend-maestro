@@ -3,20 +3,20 @@ import { readable } from 'svelte/store';
 export const eventsStore = readable({
     work: [
         {
-            icon: './icons/work.svg',
+            icon: '/icons/work.svg',
             name: 'Softwrd Ltd',
             duration: 'Aug 2021 - Present',
             subheaders: [
                 {
-                    icon: './icons/position.svg',
+                    icon: '/icons/position.svg',
                     text: 'Backend Engineer',
                 },
                 {
-                    icon: './icons/location.svg',
+                    icon: '/icons/location.svg',
                     text: 'Dhaka, Bangladesh',
                 },
                 {
-                    icon: './icons/duration.svg',
+                    icon: '/icons/duration.svg',
                     text: 'Aug 2021 - Present',
                 },
             ],
@@ -32,20 +32,20 @@ export const eventsStore = readable({
             ],
             projects: [
                 {
-                    icon: './icons/work.svg',
+                    icon: '/icons/work.svg',
                     name: 'Softwrd Ltd',
                     duration: 'Aug 2021 - Present',
                     subheaders: [
                         {
-                            icon: './icons/position.svg',
+                            icon: '/icons/position.svg',
                             text: 'Backend Engineer',
                         },
                         {
-                            icon: './icons/location.svg',
+                            icon: '/icons/location.svg',
                             text: 'Dhaka, Bangladesh',
                         },
                         {
-                            icon: './icons/duration.svg',
+                            icon: '/icons/duration.svg',
                             text: 'Aug 2021 - Present',
                         },
                     ],
@@ -55,20 +55,20 @@ export const eventsStore = readable({
                     ],
                 },
                 {
-                    icon: './icons/work.svg',
+                    icon: '/icons/work.svg',
                     name: 'Softwrd Ltd',
                     duration: 'Aug 2021 - Present',
                     subheaders: [
                         {
-                            icon: './icons/position.svg',
+                            icon: '/icons/position.svg',
                             text: 'Backend Engineer',
                         },
                         {
-                            icon: './icons/location.svg',
+                            icon: '/icons/location.svg',
                             text: 'Dhaka, Bangladesh',
                         },
                         {
-                            icon: './icons/duration.svg',
+                            icon: '/icons/duration.svg',
                             text: 'Aug 2021 - Present',
                         },
                     ],
@@ -80,20 +80,20 @@ export const eventsStore = readable({
             ],
         },
         {
-            icon: './icons/internship.svg',
+            icon: '/icons/internship.svg',
             name: 'Focus International Inc',
             duration: 'Sep 2019 - Nov 2019',
             subheaders: [
                 {
-                    icon: './icons/position.svg',
+                    icon: '/icons/position.svg',
                     text: 'Web Developer (Intern)',
                 },
                 {
-                    icon: './icons/location.svg',
+                    icon: '/icons/location.svg',
                     text: 'Yangzhou, Jiangsu, China',
                 },
                 {
-                    icon: './icons/duration.svg',
+                    icon: '/icons/duration.svg',
                     text: 'Sep 2019 - Nov 2019',
                 },
             ],
@@ -105,20 +105,20 @@ export const eventsStore = readable({
     ],
     education: [
         {
-            icon: './icons/academic.svg',
+            icon: '/icons/academic.svg',
             name: 'Yangzhou University',
             duration: 'Sep 2017 - Sep 2021',
             subheaders: [
                 {
-                    icon: './icons/position.svg',
+                    icon: '/icons/position.svg',
                     text: 'Undergraduate Student',
                 },
                 {
-                    icon: './icons/location.svg',
+                    icon: '/icons/location.svg',
                     text: 'Yangzhou, Jiangsu, China',
                 },
                 {
-                    icon: './icons/duration.svg',
+                    icon: '/icons/duration.svg',
                     text: 'Sep 2017 - Sep 2021',
                 },
             ],

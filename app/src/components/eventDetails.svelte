@@ -18,9 +18,9 @@
     {#each event.subheaders as {icon, text}}
         <Info icon={icon} label={text} />
     {/each}
-    <Info icon={'./icons/responsibilities.svg'} label={'Responsibilities I have undertaken in this role:'} />
+    <Info icon={'/icons/responsibilities.svg'} label={'Responsibilities that I have undertaken in this role:'} />
     <Points points={event.points} />
     {#if event.projects && event.projects.length > 0}
-        <Info icon={'./icons/project.svg'} label={'Responsibilities I have undertaken in this role:'} />
+        <Info icon={'/icons/project.svg'} label={'Projects that I have led or worked on while in this role:'} />
     {/if}
 </section>

@@ -48,22 +48,22 @@ export const showcaseStore = readable([
 ]);
 
 export const toolsStore = readable([
-    './icons/python.svg',
-    './icons/nodejs.svg',
-    './icons/docker.svg',
-    './icons/aws.svg',
-    './icons/elastic.svg',
-    './icons/terraform.svg',
-    './icons/git.svg',
-    './icons/github.svg',
-    './icons/postgresql.svg',
-    './icons/mongodb.svg',
-    './icons/mysql.svg',
-    './icons/redis.svg',
-    './icons/influxdb.svg',
-    './icons/svelte.svg',
-    './icons/d3js.svg',
-    './icons/go.svg',
+    '/icons/python.svg',
+    '/icons/nodejs.svg',
+    '/icons/docker.svg',
+    '/icons/aws.svg',
+    '/icons/elastic.svg',
+    '/icons/terraform.svg',
+    '/icons/git.svg',
+    '/icons/github.svg',
+    '/icons/postgresql.svg',
+    '/icons/mongodb.svg',
+    '/icons/mysql.svg',
+    '/icons/redis.svg',
+    '/icons/influxdb.svg',
+    '/icons/svelte.svg',
+    '/icons/d3js.svg',
+    '/icons/go.svg',
 ]);
 
 export const infocardStore = readable({
