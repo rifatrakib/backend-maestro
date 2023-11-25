@@ -20,4 +20,7 @@
     {/each}
     <Info icon={'./icons/responsibilities.svg'} label={'Responsibilities I have undertaken in this role:'} />
     <Points points={event.points} />
+    {#if event.projects && event.projects.length > 0}
+        <Info icon={'./icons/project.svg'} label={'Responsibilities I have undertaken in this role:'} />
+    {/if}
 </section>

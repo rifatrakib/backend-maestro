@@ -32,28 +32,52 @@ export const eventsStore = readable({
             ],
             projects: [
                 {
-                    name: "Project 1",
-                    objective: "Objective 1",
-                    duration: "Duration 1",
-                    link: "https://www.google.com",
+                    icon: './icons/work.svg',
+                    name: 'Softwrd Ltd',
+                    duration: 'Aug 2021 - Present',
+                    subheaders: [
+                        {
+                            icon: './icons/position.svg',
+                            text: 'Backend Engineer',
+                        },
+                        {
+                            icon: './icons/location.svg',
+                            text: 'Dhaka, Bangladesh',
+                        },
+                        {
+                            icon: './icons/duration.svg',
+                            text: 'Aug 2021 - Present',
+                        },
+                    ],
                     points: [
-                        "Point 1",
-                        "Point 2",
-                        "Point 3"
+                        'Built Python API servers using a microservice architecture with an OAuth2 authentication gateway for secure access, emphasizing scalable solutions.',
+                        'Provisioned AWS ECS clusters and services with Terraform and automated application deployment with GitHub Actions in Docker containers with ELK logging & monitoring maintaining TDD.',
                     ],
                 },
                 {
-                    name: "Project 2",
-                    objective: "Objective 2",
-                    duration: "Duration 2",
-                    link: "https://www.google.com",
+                    icon: './icons/work.svg',
+                    name: 'Softwrd Ltd',
+                    duration: 'Aug 2021 - Present',
+                    subheaders: [
+                        {
+                            icon: './icons/position.svg',
+                            text: 'Backend Engineer',
+                        },
+                        {
+                            icon: './icons/location.svg',
+                            text: 'Dhaka, Bangladesh',
+                        },
+                        {
+                            icon: './icons/duration.svg',
+                            text: 'Aug 2021 - Present',
+                        },
+                    ],
                     points: [
-                        "Point 1",
-                        "Point 2",
-                        "Point 3"
+                        'Participated in designing application infrastructure and deploying a comprehensive, highly available, and scalable hybrid microservices-based backend system on AWS that delivered reduced data loss and robust disaster recovery capabilities.',
+                        'Deployed MySQL databases on AWS RDS, utilizing read replicas and an RDS proxy to reduce database operations and significantly enhance system performance.',
                     ],
                 },
-            ]
+            ],
         },
         {
             icon: './icons/internship.svg',
