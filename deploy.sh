@@ -16,7 +16,7 @@ js_file=$(find dist -type f -name "index-*.js")
 # Extract the JavaScript file name
 js_file_name=$(basename "$js_file")
 
-sed -i 's/\/icons/.\/backend-maestro\/icons/g' "$js_file"
+sed -i 's/\/icons/\/backend-maestro\/icons/g' "$js_file"
 
 # Change back to the parent directory
 cd ..
