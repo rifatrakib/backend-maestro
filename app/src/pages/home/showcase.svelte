@@ -1,6 +1,7 @@
 <script>
     import { onDestroy } from 'svelte';
     import Card from '../../components/card.svelte';
+    import Header from '../../components/header.svelte';
     import { showcaseStore } from './store.js';
 
     let data;
@@ -10,31 +11,17 @@
 </script>
 
 <style>
-    section.showcase {
-        margin: 3rem auto 6rem;
-    }
-
-    header {
-        font-family: monospace;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 2rem;
-    }
-
-    section.card-container {
+    section {
         display: grid;
         gap: 2rem;
         grid-template-columns: repeat(3, 1fr);
         justify-content: space-evenly;
-        margin: 50px auto;
     }
 </style>
 
-<section class="showcase">
-    <header>Areas of experience</header>
-    <section class="card-container">
-        {#each data as { icon, title, description }}
-            <Card icon={icon} title={title} description={description} />
-        {/each}
-    </section>
+<Header text={'Areas of experience'} isSectionHeader={true} />
+<section>
+    {#each data as { icon, title, description }}
+        <Card icon={icon} title={title} description={description} />
+    {/each}
 </section>

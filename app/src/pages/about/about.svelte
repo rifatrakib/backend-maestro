@@ -1,7 +1,8 @@
 <script>
     import { onDestroy } from 'svelte';
-    import Timeline from './timeline.svelte';
+    import Timeline from '../../components/timeline.svelte';
     import Infocard from '../../components/infocard.svelte';
+    import Text from '../../components/text.svelte';
     import { eventsStore, infocardStore } from './store.js';
 
     export let page;
@@ -19,38 +20,28 @@
 </script>
 
 <style>
-    article {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 1rem;
-        padding-bottom: 5rem;
+    section.infocard {
+        margin-top: 1rem;
     }
 
-    section.infocard-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    section.timeline {
         width: 100%;
-        height: 100%;
-        margin: 2rem auto;
-    }
-
-    article div {
-        text-align: center;
-        font-size: 1.25rem;
+        padding: 2rem;
+        margin: 0;
+        border-radius: 1rem;
+        background-color: #1c1c1c;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
     }
 </style>
 
-<article>
+<section class="container infocard">
     {#if events[page] && events[page].length > 0}
-        <section class="infocard-container">
-            <Infocard header={infocard[page].header} text={infocard[page].text} isPageSubtitle={true} />
+        <Infocard header={infocard[page].header} text={infocard[page].text} />
+        <section class="timeline">
+            <Timeline events={events[page]} />
         </section>
-        <Timeline events={events[page]} />
     {:else}
-        <div>No data available for this section.</div>
+        <Text text={'No data available for this section.'} size={1.2} align={'center'} />
     {/if}
-</article>
+</section>

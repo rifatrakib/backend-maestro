@@ -1,4 +1,7 @@
 <script>
+    import Header from "./header.svelte";
+    import Text from "./text.svelte";
+
     export let icon;
     export let title;
     export let description;
@@ -24,23 +27,10 @@
     img {
         max-width: 20%;
     }
-
-    header {
-        font-family: monospace;
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-
-    p {
-        font-size: 1.2rem;
-        font-weight: 500;
-        text-align: justify;
-        color: #ffffff90;
-    }
 </style>
 
 <div class="card">
-    <img src=".{`${icon.split(".svg")[0]}.svg`}" alt="{`${icon} icon`}" class="icon" />
-    <header>{title}</header>
-    <p>{description}</p>
+    <img src="{icon}" alt="{`${title} icon`}" />
+    <Header text="{title}" isSectionHeader={false} />
+    <Text text={description} size={1.2} align={"justify"} color={"faded"} />
 </div>

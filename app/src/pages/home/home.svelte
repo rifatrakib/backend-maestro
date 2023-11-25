@@ -1,8 +1,8 @@
 <script>
     import { onDestroy } from 'svelte';
     import Hero from './hero.svelte';
-    import Skills from './toolbox.svelte';
     import Showcase from './showcase.svelte';
+    import Toolbox from './toolbox.svelte';
     import Infocard from '../../components/infocard.svelte';
     import { infocardStore } from './store.js';
 
@@ -13,22 +13,25 @@
 </script>
 
 <style>
-    section.infocard-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    section.hero {
         align-items: center;
-        width: 100%;
-        height: 100%;
-        margin: 3rem auto 6rem;
+        margin-top: 2rem;
+        background-color: #1c1c1c;
+        border-radius: 1rem;
+        padding: 2rem 3rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }
 </style>
 
-<article>
+<section class="container hero">
     <Hero />
-    <section class="infocard-container">
-        <Infocard header={data.header} text={data.text}  />
-    </section>
+</section>
+<section class="container infocard">
+    <Infocard header={data.header} text={data.text} isCommonText={true} />
+</section>
+<section class="container showcase">
     <Showcase />
-    <Skills />
-</article>
+</section>
+<section class="container toolbox">
+    <Toolbox />
+</section>
