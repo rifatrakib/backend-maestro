@@ -24,8 +24,7 @@
         font-weight: 400;
         line-height: 1.2rem;
         color: #ffffff90;
-        padding-left: 0.5rem;
-        font-style: italic;
+        padding-left: 0.2rem;
     }
 </style>
 
