@@ -15,6 +15,10 @@
         justify-content: space-between;
         height: 100%;
     }
+
+    section.scroll-bar {
+        z-index: 20;
+    }
 </style>
 
 <main>
@@ -22,7 +26,9 @@
         options={pages}
         activePage={currentPage}
         on:changePage={(event) => currentPage = event.detail} />
-    <Svrollbar />
+    <section class="scroll-bar">
+        <Svrollbar />
+    </section>
     <Body currentPage={currentPage} pages={pages} />
     <Footer />
 </main>
