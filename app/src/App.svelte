@@ -1,4 +1,5 @@
 <script>
+    import { Svrollbar } from 'svrollbar';
     import Navbar from './pages/navbar.svelte';
     import Body from './pages/body.svelte';
     import Footer from './pages/footer.svelte';
@@ -21,6 +22,7 @@
         options={pages}
         activePage={currentPage}
         on:changePage={(event) => currentPage = event.detail} />
+    <Svrollbar />
     <Body currentPage={currentPage} pages={pages} />
     <Footer />
 </main>
