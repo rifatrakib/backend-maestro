@@ -1,12 +1,17 @@
 <script>
-    export let data;
+    export let socials;
 </script>
 
 <style>
-    button {
+    section.social-buttons {
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
+        gap: 1rem;
+    }
+
+    button {
         margin: 0;
         padding: 0;
         border-radius: 50%;
@@ -14,26 +19,32 @@
         background-color: transparent;
     }
 
-    button:hover {
-        transform: scale(1.2);
-    }
-
     a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin: 0;
+        padding: 0;
         border: 0px solid transparent;
     }
 
     img {
-        width: 40px;
-        height: 40px;
+        margin: 0;
+        padding: 0;
+        width: 2.2rem;
+        height: 2.2rem;
         border: 0px solid transparent;
+        transition: transform 0.25s ease-in-out;
+    }
+
+    img:hover {
+        transform: scale(1.2);
     }
 </style>
 
-<button>
-    <a href="{data.link}" target="_blank">
-        <img src="{data.logo}" alt="{data.alt}" />
-    </a>
-</button>
+<section class="social-buttons">
+    {#each socials as social}
+        <button>
+            <a href="{social.link}" target="_blank">
+                <img src="{social.logo}" alt="{social.alt}" />
+            </a>
+        </button>
+    {/each}
+</section>

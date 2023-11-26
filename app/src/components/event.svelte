@@ -28,6 +28,7 @@
         margin-left: -1rem;
         padding: 0.5rem 1rem;
         border-radius: 1rem;
+        transition: background-color 0.25s ease-in-out;
     }
 
     section.project:hover {

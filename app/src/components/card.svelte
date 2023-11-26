@@ -17,6 +17,7 @@
         padding: 2.5rem;
         box-sizing: border-box;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+        transition: background-color 0.5s ease-in-out;
     }
 
     div.card:hover {

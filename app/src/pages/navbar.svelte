@@ -46,13 +46,6 @@
         display: flex;
         justify-content: space-evenly;
     }
-
-    nav section.social-buttons {
-        gap: 0.5rem;
-        display: flex;
-        justify-content: space-evenly;
-        margin-left: auto;
-    }
 </style>
 
 <div>
@@ -66,10 +59,6 @@
                     on:changePage={changePage} />
             {/each}
         </section>
-        <section class="social-buttons">
-            {#each socials as social}
-                <Social data={social} />
-            {/each}
-        </section>
+        <Social socials={socials} />
     </nav>
 </div>

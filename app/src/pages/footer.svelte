@@ -4,8 +4,8 @@
     import { navStore } from './store.js';
 
     let year = new Date().getFullYear();
-    let pages;
-    const unsubscribe = navStore.subscribe(value => pages = value);
+    let socials;
+    const unsubscribe = navStore.subscribe(value => socials = value);
 
     onDestroy(() => unsubscribe());
 </script>
@@ -30,14 +30,6 @@
         justify-content: space-between;
     }
 
-    section.footer-links {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-
     p {
         font-size: 1.25rem;
         font-weight: 400;
@@ -48,11 +40,7 @@
 
 <footer>
     <section class="footer-container">
-        <section class="footer-links">
-            {#each pages as page}
-                <Social data={page} />
-            {/each}
-        </section>
+        <Social socials={socials} />
         <section class="footer-license">
             <p>© {year} - All rights reserved to Md Abdur Rakib</p>
         </section>

@@ -55,6 +55,7 @@
         margin: 1rem 1rem 1rem 2.5rem;
         padding: 0.5rem 1rem;
         border: 1px solid #ffffff90;
+        transition: background-color 0.5s ease-in-out;
     }
 
     button.has-icon:hover {
