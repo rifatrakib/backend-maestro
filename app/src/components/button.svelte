@@ -49,14 +49,16 @@
     button.has-icon {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 1rem 1rem 2.5rem;
         padding: 0.5rem 1rem;
-        border: 1px solid #105043;
-        justify-content: space-between;
+        border: 1px solid #ffffff90;
     }
 
     button.has-icon:hover {
-        background-color: #105043;
+        background-color: #ffffff10;
     }
 
     button:not(.has-icon):not(.logo) {

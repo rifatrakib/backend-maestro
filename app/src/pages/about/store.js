@@ -35,6 +35,7 @@ export const eventsStore = readable({
                     icon: '/icons/work.svg',
                     name: 'Softwrd Ltd',
                     duration: 'Aug 2021 - Present',
+                    link: 'https://softwrd.ai/',
                     subheaders: [
                         {
                             icon: '/icons/position.svg',
@@ -83,6 +84,7 @@ export const eventsStore = readable({
             icon: '/icons/internship.svg',
             name: 'Focus International Inc',
             duration: 'Sep 2019 - Nov 2019',
+            link: 'https://www.focusintl.com/',
             subheaders: [
                 {
                     icon: '/icons/position.svg',
