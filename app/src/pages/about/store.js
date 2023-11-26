@@ -5,8 +5,8 @@ export const eventsStore = readable({
         {
             icon: '/icons/work.svg',
             name: 'Softwrd Ltd',
-            duration: 'Aug 2021 - Present',
-            subheaders: [
+            subheader: 'Aug 2021 - Present',
+            metadata: [
                 {
                     icon: '/icons/position.svg',
                     text: 'Backend Engineer',
@@ -33,48 +33,69 @@ export const eventsStore = readable({
             projects: [
                 {
                     icon: '/icons/work.svg',
-                    name: 'Softwrd Ltd',
-                    duration: 'Aug 2021 - Present',
-                    subheaders: [
+                    name: 'PropCloud',
+                    subheader: 'PropCloud AS',
+                    link: 'https://propcloud.no/',
+                    metadata: [
                         {
-                            icon: '/icons/position.svg',
-                            text: 'Backend Engineer',
+                            icon: '/icons/genre.svg',
+                            text: 'Backend & Infrastructure Engineering, Database Design & Optimization, Data Modeling & Analytics',
                         },
                         {
-                            icon: '/icons/location.svg',
-                            text: 'Dhaka, Bangladesh',
+                            icon: '/icons/reference.svg',
+                            text: 'https://propcloud.no/',
                         },
                         {
                             icon: '/icons/duration.svg',
-                            text: 'Aug 2021 - Present',
+                            text: 'Aug 2021 - Oct 2022',
+                        },
+                        {
+                            icon: '/icons/objective.svg',
+                            text: "Design and build a scalable backend infrastructure for a B2B web app providing advanced real estate and geospatial data analysis, leveraging cutting-edge technologies and industry best practices to ensure a seamless user experience and meet the target audience's needs.",
                         },
                     ],
                     points: [
-                        'Built Python API servers using a microservice architecture with an OAuth2 authentication gateway for secure access, emphasizing scalable solutions.',
-                        'Provisioned AWS ECS clusters and services with Terraform and automated application deployment with GitHub Actions in Docker containers with ELK logging & monitoring maintaining TDD.',
+                        'Development of multiple microservices focused on providing comprehensive data analytics and geospatial analysis solutions on large volumes of real estate information.',
+                        'Developed charting framework, leveraging Python, MongoDB, and Redis, with D3.js frontend.',
+                        'Streamlined generalized data validation across teams by leveraging pydantic-based modules and MongoDB schema validation, resulting in improved data quality and productivity gains.',
+                        'Designed and deployed scalable and highly available backend systems on AWS provisioned with Terraform, incorporating ELK stack for logging & monitoring, GitHub Actions for CI/CD, and optimizing database performance with AWS RDS read replicas and RDS proxy.',
+                    ],
+                    tools: [
+                        'Backend: Python (frameworks used: flask, fastapi).',
+                        'Data analysis: Leveraging database functions, NumPy ecosystem (NumPy, pandas, dask).',
+                        'Validation works: pydantic-based public & in-house private packages.',
+                        'Databases: MongoDB (semi-structured), MySQL (structured), Redis (cache & message broker).',
+                        'Infrastructure: AWS & Elastic cloud services, Terraform, automated testing with pytest as part of GitHub Actions CI/CD pipeline.',
                     ],
                 },
                 {
                     icon: '/icons/work.svg',
-                    name: 'Softwrd Ltd',
-                    duration: 'Aug 2021 - Present',
-                    subheaders: [
+                    name: 'Area Analysis',
+                    subheader: 'PropCloud AS',
+                    metadata: [
                         {
-                            icon: '/icons/position.svg',
-                            text: 'Backend Engineer',
-                        },
-                        {
-                            icon: '/icons/location.svg',
-                            text: 'Dhaka, Bangladesh',
+                            icon: '/icons/genre.svg',
+                            text: 'Data Engineering & Analysis, Data Modeling',
                         },
                         {
                             icon: '/icons/duration.svg',
-                            text: 'Aug 2021 - Present',
+                            text: 'Feb 2022 - Apr 2023',
+                        },
+                        {
+                            icon: '/icons/objective.svg',
+                            text: 'Develop and implement a pipeline for the automated collection of real estate and geospatial data utilizing scrapers, as well as incorporating necessary pre-processing, ETL, and post-processing tasks.',
                         },
                     ],
                     points: [
-                        'Participated in designing application infrastructure and deploying a comprehensive, highly available, and scalable hybrid microservices-based backend system on AWS that delivered reduced data loss and robust disaster recovery capabilities.',
-                        'Deployed MySQL databases on AWS RDS, utilizing read replicas and an RDS proxy to reduce database operations and significantly enhance system performance.',
+                        'Built scrapers with Scrapy to collect large volumes of structured and unstructured geospatial & real estate data from various providers, including the Norwegian Mapping Authority.',
+                        'Implement end-to-end data pipeline with data collection, cleaning & sanitizing, and ETL steps.',
+                        'Implemented industry-standard security protocols and leveraged AWS security features to ensure secure data transmission, storage, and access throughout the data lifecycle.',
+                    ],
+                    tools: [
+                        'Web crawlers and scrapers: Python (frameworks and libraries used: Scrapy, httpx, & more).',
+                        'Data: pydantic and NumPy ecosystem (NumPy, pandas, dask), MongoDB, AWS glue & others.',
+                        'Storage: Amazon S3, MySQL, MongoDB.',
+                        'Quick analysis and Visualization: Microsoft Power BI, Microsoft Excel.',
                     ],
                 },
             ],
@@ -82,8 +103,8 @@ export const eventsStore = readable({
         {
             icon: '/icons/internship.svg',
             name: 'Focus International Inc',
-            duration: 'Sep 2019 - Nov 2019',
-            subheaders: [
+            subheader: 'Sep 2019 - Nov 2019',
+            metadata: [
                 {
                     icon: '/icons/position.svg',
                     text: 'Web Developer (Intern)',
@@ -107,8 +128,8 @@ export const eventsStore = readable({
         {
             icon: '/icons/academic.svg',
             name: 'Yangzhou University',
-            duration: 'Sep 2017 - Sep 2021',
-            subheaders: [
+            subheader: 'Sep 2017 - Sep 2021',
+            metadata: [
                 {
                     icon: '/icons/position.svg',
                     text: 'Undergraduate Student',
@@ -130,7 +151,74 @@ export const eventsStore = readable({
             ],
         },
     ],
-    projects: [],
+    projects: [
+        {
+            icon: '/icons/project.svg',
+            name: 'SpectraTrace',
+            subheader: 'May 2023 - Jun 2023',
+            link: 'https://github.com/rifatrakib/SpectraTrace',
+            metadata: [
+                {
+                    icon: '/icons/reference.svg',
+                    text: 'https://github.com/rifatrakib/SpectraTrace',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'May 2023 - Jun 2023',
+                },
+                {
+                    icon: '/icons/objective.svg',
+                    text: 'SpectraTrace is an audit log service with the ability to store, trace, and analyze a broad spectrum of events, enabling deep insights and comprehensive analysis.',
+                },
+            ],
+            points: [
+                'A write-intensive fastapi service that will accept event data sent by other systems and provide an HTTP endpoint for querying recorded event data by field values.',
+                'Celery app which polls for events pushed in a Redis queue and pushes the processed data to InfluxDB bucket.',
+                'A typer CLI application which allows easy management of the API along with all its resources.',
+                'Containerized databases managed via docker compose and persistent volumes.',
+            ],
+            tools: [
+                'Backend: Python (frameworks used: fastapi).',
+                'Consumer: Python (Celery)',
+                'Validation works: pydantic-based packages.',
+                'Databases: InfluxDB (event logs), PostgreSQL (user information), Redis (cache & message broker).',
+                'Infrastructure: docker compose.',
+            ],
+        },
+        {
+            icon: '/icons/project.svg',
+            name: 'Lazuli',
+            subheader: 'Apr 2023 - Apr 2023',
+            link: 'https://github.com/rifatrakib/lazuli',
+            metadata: [
+                {
+                    icon: '/icons/reference.svg',
+                    text: 'https://github.com/rifatrakib/lazuli',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'Apr 2023 - Apr 2023',
+                },
+                {
+                    icon: '/icons/objective.svg',
+                    text: 'Develop a versatile web scraping tool for extracting data from the Japanese Adidas website aiming to streamline the data collection and preprocessing process.',
+                },
+            ],
+            points: [
+                'Scrapy web crawler with automated data preprocessing & validation, ETL (Extract Transform Load), and data modeling workloads.',
+                'Versioning system (for preprocessed & final reports along with other important things like logs for monitoring purposes and scraping session statistics).',
+                'Fully automated reporting tools (email session reports with KPIs) and visualization (provide visualization about KPIs and insights about scraping session performance).',
+                'typer CLI application to provide central management of all the features.',
+            ],
+            tools: [
+                'Web crawlers and scrapers: Python (framework used: Scrapy, openpyxl).',
+                'Data: pydantic and NumPy ecosystem (NumPy, pandas), Microsoft Excel.',
+                'Monitoring and Visualization: Python (Matplotlib, Seaborn).',
+                'Data Versioning: File-system versioning.',
+                'CLI: typer.',
+            ],
+        },
+    ],
 });
 
 export const infocardStore = readable({

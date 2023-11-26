@@ -1,4 +1,5 @@
 <script>
+    import Button from './button.svelte';
     import Info from './info.svelte';
     import EventDetails from './eventDetails.svelte';
 
@@ -35,7 +36,11 @@
 </style>
 
 <section>
-    <Info type={'header'} icon={event.icon} label={event.name} subText={`(${event.duration})`} />
+    <Info
+        type={'header'}
+        icon={event.icon}
+        label={event.name}
+        subText={event.subheader ? `(${event.subheader})` : null} />
 </section>
 <section class="details-container">
     <EventDetails event={event} />
@@ -47,5 +52,8 @@
                 </section>
             {/each}
         </section>
+    {/if}
+    {#if event.link}    
+        <Button label={'View'} icon={'/icons/link.svg'} link={event.link} />
     {/if}
 </section>
