@@ -40,7 +40,7 @@
         type={'header'}
         icon={event.icon}
         label={event.name}
-        subText={event.duration ? `(${event.duration})` : null} />
+        subText={event.subheader ? `(${event.subheader})` : null} />
 </section>
 <section class="details-container">
     <EventDetails event={event} />

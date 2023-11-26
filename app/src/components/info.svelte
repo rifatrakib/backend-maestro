@@ -6,14 +6,22 @@
     export let label;
     export let type = null;
     export let subText = null;
+    export let alignment = 'center';
 </script>
 
 <style>
     section {
         display: flex;
         flex-direction: row;
-        align-items: center;
         gap: 1rem;
+    }
+
+    section.align-center {
+        align-items: center;
+    }
+
+    section.align-top {
+        align-items: flex-start;
     }
 
     section img {
@@ -27,7 +35,7 @@
     }
 </style>
 
-<section>
+<section class="align-{alignment}">
     <img class:header={type === 'header'} src="{icon}" alt="{`${label} icon`}" />
     {#if type === 'header'}
         <Header text={label} subText={subText} isSectionHeader={false} />
