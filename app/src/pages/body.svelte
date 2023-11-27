@@ -1,9 +1,17 @@
 <script>
+    import { quintInOut } from 'svelte/easing';
     import Home from './home/home.svelte';
-    import About from './about/about.svelte';
+    import Work from './about/work.svelte';
+    import Education from './about/education.svelte';
+    import Projects from './about/projects.svelte';
 
     export let currentPage;
-    export let pages;
+    export let direction;
+
+    $:transitionParams = {
+        in: {x: 500 * direction, duration: 1000, easing: quintInOut},
+        out: {duration: 100, easing: quintInOut},
+    };
 
     $:if (currentPage) {window.scrollTo(0, 0)};
 </script>
@@ -18,8 +26,12 @@
 
 <div>
     {#if currentPage === 'home'}
-        <Home />
-    {:else if pages.includes(currentPage)}
-        <About page={currentPage} />
+        <Home transitionParams={transitionParams} />
+    {:else if currentPage === 'work'}
+        <Work transitionParams={transitionParams} />
+    {:else if currentPage === 'education'}
+        <Education transitionParams={transitionParams} />
+    {:else if currentPage === 'projects'}
+        <Projects transitionParams={transitionParams} />
     {/if}
 </div>

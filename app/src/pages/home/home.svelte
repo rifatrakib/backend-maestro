@@ -1,10 +1,13 @@
 <script>
     import { onDestroy } from 'svelte';
+    import { fade, fly } from 'svelte/transition';
     import Hero from './hero.svelte';
     import Showcase from './showcase.svelte';
     import Toolbox from './toolbox.svelte';
     import Infocard from '../../components/infocard.svelte';
     import { infocardStore } from './store.js';
+
+    export let transitionParams;
 
     let data;
     const unsubscribe = infocardStore.subscribe(value => data = value);
@@ -23,15 +26,17 @@
     }
 </style>
 
-<section class="container hero">
-    <Hero />
-</section>
-<section class="container infocard">
-    <Infocard header={data.header} text={data.text} isCommonText={true} />
-</section>
-<section class="container showcase">
-    <Showcase />
-</section>
-<section class="container toolbox">
-    <Toolbox />
+<section in:fly={transitionParams.in} out:fade={transitionParams.out}>
+    <section class="container hero">
+        <Hero />
+    </section>
+    <section class="container infocard">
+        <Infocard header={data.header} text={data.text} isCommonText={true} />
+    </section>
+    <section class="container showcase">
+        <Showcase />
+    </section>
+    <section class="container toolbox">
+        <Toolbox />
+    </section>
 </section>

@@ -5,7 +5,13 @@
     import Footer from './pages/footer.svelte';
 
     let currentPage = 'home';
+    let direction = 1;
     const pages = ['home', 'work', 'education', 'projects'];
+
+    const changePage = (event) => {
+        direction = pages.findIndex(page => page === event.detail) > pages.findIndex(page => page === currentPage) ? 1 : -1;
+        currentPage = event.detail;
+    };
 </script>
 
 <style>
@@ -25,10 +31,10 @@
     <Navbar
         options={pages}
         activePage={currentPage}
-        on:changePage={(event) => currentPage = event.detail} />
+        on:changePage={changePage} />
     <section class="scroll-bar">
         <Svrollbar />
     </section>
-    <Body currentPage={currentPage} pages={pages} />
+    <Body currentPage={currentPage} direction={direction} />
     <Footer />
 </main>
