@@ -15,7 +15,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 1.5rem 0 3rem;
+        padding: 1rem 0 2rem;
         background-color: #202020;
         top: 0;
         position: sticky;
@@ -28,6 +28,7 @@
         text-align: center;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     p {

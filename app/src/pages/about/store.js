@@ -172,6 +172,42 @@ export const projectsStore = readable({
     events: [
         {
             icon: '/icons/project.svg',
+            name: 'eMart',
+            subheader: 'Aug 2023 - Present',
+            link: 'https://github.com/rifatrakib/emart',
+            metadata: [
+                {
+                    icon: '/icons/reference.svg',
+                    text: 'https://github.com/rifatrakib/emart',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'Aug 2023 - Present',
+                },
+                {
+                    icon: '/icons/objective.svg',
+                    text: "Architect and implement a secure, scalable e-commerce platform with a microservices architecture, utilizing diverse programming languages, databases, and storage solutions, while integrating robust logging and monitoring within Docker containers (targeting to use Kubernetes in future); strategically employing public and private networks for containers based on their specific purposes to enhance deployment efficiency and performance.",
+                },
+            ],
+            points: [
+                'Learn to implement a microservices architecture for the e-commerce platform, enhancing scalability and maintainability.',
+                'Targeted for learning to use various programming languages (Python, Go, NodeJS) to build different services, contributing to a versatile and adaptable system.',
+                'Divresify databases and storage solutions in order to learn configuration and optimization as well as comparison among databases of different orientation.',
+                'Learn to configure docker containers, ensuring consistency across development, testing, and production environments and securing services via access control using docker networks.',
+                'Learn to configure comprehensive logging and monitoring mechanisms with elastic stack and APM server to provide real-time insights into system performance and facilitate proactive issue detection.',
+                'Designed the platform with scalability in mind, allowing it for easy migration to leverage Kubernetes instead of docker compose.',
+            ],
+            tools: [
+                'Microservices Architecture: APIs built with Python, Go, and Node.JS',
+                'Databases & Storage Solutions: PostgreSQL, MongoDB, Redis, and others.',
+                'Containerization: Docker, Docker Compose.',
+                'Access Control & Networking: Docker networks, Docker Compose.',
+                'Logging & Monitoring: Elastic Stack (Elasticsearch, Logstash, Kibana), Application Performance Monitoring (APM) server.',
+                'Scalability & Orchestration: Kubernetes for potential migration.',
+            ],            
+        },
+        {
+            icon: '/icons/project.svg',
             name: 'SpectraTrace',
             subheader: 'May 2023 - Jun 2023',
             link: 'https://github.com/rifatrakib/SpectraTrace',
