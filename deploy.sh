@@ -29,4 +29,4 @@ git commit -m "deployed at $timestamp"
 git push origin master
 
 # Perform the git subtree push
-# git subtree push --prefix app/dist origin gh-pages
+git subtree push --prefix app/dist origin gh-pages
