@@ -3,6 +3,7 @@
     export let subText = null;
     export let isSectionHeader;
     export let cvSection = null;
+    export let isNamecard = false;
 </script>
 
 <style>
@@ -32,9 +33,15 @@
         font-size: 2rem;
         font-weight: 700;
     }
+
+    header.namecard {
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 3.75rem;
+    }
 </style>
 
-<header class:section-header={isSectionHeader} class:cv-section={cvSection}>
+<header class:section-header={isSectionHeader} class:cv-section={cvSection} class:namecard={isNamecard}>
     {text}
     {#if subText}
         <span>{subText}</span>

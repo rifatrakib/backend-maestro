@@ -7,6 +7,7 @@
     export let type = null;
     export let subText = null;
     export let alignment = 'center';
+    export let isNamecard = false;
 </script>
 
 <style>
@@ -24,6 +25,10 @@
         align-items: flex-start;
     }
 
+    section.namecard {
+        flex-direction: row-reverse;
+    }
+
     section img {
         width: 1.5rem;
         height: 1.5rem;
@@ -35,7 +40,7 @@
     }
 </style>
 
-<section class="align-{alignment}">
+<section class="align-{alignment}" class:namecard={isNamecard}>
     <img class:header={type === 'header'} src="{icon}" alt="{`${label} icon`}" />
     {#if type === 'header'}
         <Header text={label} subText={subText} isSectionHeader={false} />

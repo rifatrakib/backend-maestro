@@ -5,6 +5,7 @@
     import Header from '../../components/header.svelte';
     import Infocard from '../../components/infocard.svelte';
     import Text from '../../components/text.svelte';
+    import Namecard from '../../components/namecard.svelte';
     import { workStore, educationStore, projectsStore } from './store.js';
     import { infocardStore } from '../home/store';
 
@@ -66,6 +67,9 @@
 <section class="container infocard" in:fly={transitionParams.in} out:fade={transitionParams.out}>
     <Infocard header={'Preview my CV'} text={'Some sample text'} />
     <section class="timeline">
+        <section class="experience">
+            <Namecard />
+        </section>
         <section class="experience">
             <section class="section-heading">
                 <Header text={'Summary'} isSectionHeader={false} cvSection={true} />

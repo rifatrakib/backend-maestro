@@ -4,6 +4,7 @@
     export let color = "primary";
     export let align = "left";
     export let placement = null;
+    export let isNamecard = false;
 
     const sizeClass = size.toString().replace(".", "_");
 </script>
@@ -59,8 +60,13 @@
         font-weight: 400;
         line-height: unset;
     }
+
+    p.namecard {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
 </style>
 
-<p class="size-{sizeClass} color-{color} align-{align} {placement}">
+<p class="size-{sizeClass} color-{color} align-{align} {placement}" class:namecard={isNamecard}>
     {text}
 </p>
