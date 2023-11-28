@@ -52,6 +52,13 @@
     p.subtitle {
         padding: 0 10%;
     }
+
+    p.cv {
+        padding: 1rem 2rem 0 0;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: unset;
+    }
 </style>
 
 <p class="size-{sizeClass} color-{color} align-{align} {placement}">

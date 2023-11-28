@@ -6,7 +6,7 @@
 
     let currentPage = 'home';
     let direction = 1;
-    const pages = ['home', 'work', 'education', 'projects'];
+    const pages = ['home', 'work', 'education', 'projects', 'CV'];
 
     const changePage = (event) => {
         direction = pages.findIndex(page => page === event.detail) > pages.findIndex(page => page === currentPage) ? 1 : -1;

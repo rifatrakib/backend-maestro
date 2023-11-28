@@ -2,6 +2,7 @@
     export let text;
     export let subText = null;
     export let isSectionHeader;
+    export let cvSection = null;
 </script>
 
 <style>
@@ -26,9 +27,14 @@
         color: #ffffff90;
         padding-left: 0.2rem;
     }
+
+    header.cv-section {
+        font-size: 2rem;
+        font-weight: 700;
+    }
 </style>
 
-<header class:section-header={isSectionHeader}>
+<header class:section-header={isSectionHeader} class:cv-section={cvSection}>
     {text}
     {#if subText}
         <span>{subText}</span>

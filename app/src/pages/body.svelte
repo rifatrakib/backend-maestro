@@ -4,6 +4,7 @@
     import Work from './about/work.svelte';
     import Education from './about/education.svelte';
     import Projects from './about/projects.svelte';
+    import CV from './about/cv.svelte';
 
     export let currentPage;
     export let direction;
@@ -33,5 +34,7 @@
         <Education transitionParams={transitionParams} />
     {:else if currentPage === 'projects'}
         <Projects transitionParams={transitionParams} />
+    {:else if currentPage === 'CV'}
+        <CV transitionParams={transitionParams} />
     {/if}
 </div>
