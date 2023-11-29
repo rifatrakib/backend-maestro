@@ -1,5 +1,10 @@
 import { readable } from 'svelte/store';
 
+export const cvStore = readable({
+    header: 'Preview CV',
+    text: 'Explore my condensed CV, capturing professional milestones, academic achievements, and standout projects. Uncover a snapshot of my skills, experiences, and the unique journey shaping my profile. Dive in to discover the fusion of expertise, passion, and dedication that defines my professional narrative.',
+});
+
 export const workStore = readable({
     info: {
         header: 'Discover Expertise',

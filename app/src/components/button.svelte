@@ -8,10 +8,12 @@
     export let link = null;
     export let isActive = false;
     export let isLogo = false;
+    export let isCV = false;
 
     let buttonLabel = `${label.charAt(0).toUpperCase()}${label.slice(1)}`;
 
     const changePage = () => dispatch('changePage', label);
+    const downloadCV = () => dispatch('download');
 </script>
 
 <style>
@@ -75,6 +77,11 @@
         color: #1abc9c;
     }
 
+    button.cv {
+        align-self: center;
+        margin: 0;
+    }
+
     img {
         width: 1.2rem;
         height: 1.2rem;
@@ -87,13 +94,18 @@
         <span class="separator">|</span>
         <span>Maestro</span>
     </button>
-{:else if icon}
+{:else if icon && !isCV}
     <a href="{link}" target="_blank" rel="noreferrer">
         <button class="has-icon">
             {buttonLabel}
             <img src="{icon}" alt="link" />
         </button>
     </a>
+{:else if isCV}
+    <button class="has-icon cv" on:click={downloadCV}>
+        {buttonLabel}
+        <img src="{icon}" alt="link" />
+    </button>
 {:else}
     <button disabled={isActive} class:active={isActive} on:click={changePage}>{buttonLabel}</button>
 {/if}

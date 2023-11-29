@@ -7,10 +7,13 @@
     import Points from '../../components/points.svelte';
     import Text from '../../components/text.svelte';
     import Namecard from '../../components/namecard.svelte';
-    import { workStore, educationStore, projectsStore, skillsStore, volunteerStore, awardsStore } from './store.js';
+    import { cvStore, workStore, educationStore, projectsStore, skillsStore, volunteerStore, awardsStore } from './store.js';
     import { infocardStore } from '../home/store';
 
     export let transitionParams;
+
+    let headings;
+    const cvUnsub = cvStore.subscribe(value => headings = value);
 
     let summary;
     const infoUnsub = infocardStore.subscribe(value => summary = value);
@@ -34,6 +37,7 @@
     const awardsUnsub = awardsStore.subscribe(value => awards = value.events);
 
     onDestroy(() => {
+        cvUnsub();
         infoUnsub();
         skillsUnsub();
         workUnsub();
@@ -42,6 +46,8 @@
         volunteerUnsub();
         awardsUnsub();
     });
+
+    const downloadCV = () => print();
 </script>
 
 <style>
@@ -78,7 +84,7 @@
 </style>
 
 <section class="container infocard" in:fly={transitionParams.in} out:fade={transitionParams.out}>
-    <Infocard header={'Preview my CV'} text={'Some sample text'} />
+    <Infocard header={headings.header} text={headings.text} isCV={true} on:download={downloadCV} />
     <section class="timeline">
         <section class="experience">
             <Namecard />
