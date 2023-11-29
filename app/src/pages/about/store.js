@@ -24,6 +24,7 @@ export const workStore = readable({
                     text: 'Aug 2021 - Present',
                 },
             ],
+            pointsText: 'Responsibilities that I have undertaken in this role:',
             points: [
                 'Built Python API servers using a microservice architecture with an OAuth2 authentication gateway for secure access, emphasizing scalable solutions.',
                 'Provisioned AWS ECS clusters and services with Terraform and automated application deployment with GitHub Actions in Docker containers with ELK logging & monitoring maintaining TDD.',
@@ -34,6 +35,7 @@ export const workStore = readable({
                 'Participated in designing application infrastructure and deploying a comprehensive, highly available, and scalable hybrid microservices-based backend system on AWS that delivered reduced data loss and robust disaster recovery capabilities.',
                 'Deployed MySQL databases on AWS RDS, utilizing read replicas and an RDS proxy to reduce database operations and significantly enhance system performance.',
             ],
+            projectsText: 'Projects that I have led or worked on while in this role:',
             projects: [
                 {
                     icon: '/icons/work.svg',
@@ -58,12 +60,14 @@ export const workStore = readable({
                             text: "Design and build a scalable backend infrastructure for a B2B web app providing advanced real estate and geospatial data analysis, leveraging cutting-edge technologies and industry best practices to ensure a seamless user experience and meet the target audience's needs.",
                         },
                     ],
+                    pointsText: 'Responsibilities that I have undertaken in this role:',
                     points: [
                         'Development of multiple microservices focused on providing comprehensive data analytics and geospatial analysis solutions on large volumes of real estate information.',
                         'Developed charting framework, leveraging Python, MongoDB, and Redis, with D3.js frontend.',
                         'Streamlined generalized data validation across teams by leveraging pydantic-based modules and MongoDB schema validation, resulting in improved data quality and productivity gains.',
                         'Designed and deployed scalable and highly available backend systems on AWS provisioned with Terraform, incorporating ELK stack for logging & monitoring, GitHub Actions for CI/CD, and optimizing database performance with AWS RDS read replicas and RDS proxy.',
                     ],
+                    toolsText: 'Tools & technologies that I have used in this project:',
                     tools: [
                         'Backend: Python (frameworks used: flask, fastapi).',
                         'Data analysis: Leveraging database functions, NumPy ecosystem (NumPy, pandas, dask).',
@@ -90,11 +94,13 @@ export const workStore = readable({
                             text: 'Develop and implement a pipeline for the automated collection of real estate and geospatial data utilizing scrapers, as well as incorporating necessary pre-processing, ETL, and post-processing tasks.',
                         },
                     ],
+                    pointsText: 'Responsibilities that I have undertaken in this role:',
                     points: [
                         'Built scrapers with Scrapy to collect large volumes of structured and unstructured geospatial & real estate data from various providers, including the Norwegian Mapping Authority.',
                         'Implement end-to-end data pipeline with data collection, cleaning & sanitizing, and ETL steps.',
                         'Implemented industry-standard security protocols and leveraged AWS security features to ensure secure data transmission, storage, and access throughout the data lifecycle.',
                     ],
+                    toolsText: 'Tools & technologies that I have used in this project:',
                     tools: [
                         'Web crawlers and scrapers: Python (frameworks and libraries used: Scrapy, httpx, & more).',
                         'Data: pydantic and NumPy ecosystem (NumPy, pandas, dask), MongoDB, AWS glue & others.',
@@ -122,6 +128,7 @@ export const workStore = readable({
                     text: 'Sep 2019 - Nov 2019',
                 },
             ],
+            pointsText: 'Responsibilities that I have undertaken in this role:',
             points: [
                 'Built the frontend of the company website using HTML, CSS, & JavaScript.',
                 'Get familiar with web server technologies and deployment of websites and databases in the cloud.',
@@ -154,6 +161,7 @@ export const educationStore = readable({
                     text: 'Sep 2017 - Sep 2021',
                 },
             ],
+            pointsText: 'Some highlights during my time at Yangzhou University:',
             points: [
                 'Graduated with a CGPA of 4.4 out of 5.0 (scored 93.7%).',
                 'Multiple awards for academic excellence.',
@@ -189,6 +197,7 @@ export const projectsStore = readable({
                     text: "Architect and implement a secure, scalable e-commerce platform with a microservices architecture, utilizing diverse programming languages, databases, and storage solutions, while integrating robust logging and monitoring within Docker containers (targeting to use Kubernetes in future); strategically employing public and private networks for containers based on their specific purposes to enhance deployment efficiency and performance.",
                 },
             ],
+            pointsText: 'Principal focus areas of this project:',
             points: [
                 'Learn to implement a microservices architecture for the e-commerce platform, enhancing scalability and maintainability.',
                 'Targeted for learning to use various programming languages (Python, Go, NodeJS) to build different services, contributing to a versatile and adaptable system.',
@@ -197,6 +206,7 @@ export const projectsStore = readable({
                 'Learn to configure comprehensive logging and monitoring mechanisms with elastic stack and APM server to provide real-time insights into system performance and facilitate proactive issue detection.',
                 'Designed the platform with scalability in mind, allowing it for easy migration to leverage Kubernetes instead of docker compose.',
             ],
+            toolsText: 'Tools & technologies that I have used in this project:',
             tools: [
                 'Microservices Architecture: APIs built with Python, Go, and Node.JS',
                 'Databases & Storage Solutions: PostgreSQL, MongoDB, Redis, and others.',
@@ -225,12 +235,14 @@ export const projectsStore = readable({
                     text: 'SpectraTrace is an audit log service with the ability to store, trace, and analyze a broad spectrum of events, enabling deep insights and comprehensive analysis.',
                 },
             ],
+            pointsText: 'Principal focus areas of this project:',
             points: [
                 'A write-intensive fastapi service that will accept event data sent by other systems and provide an HTTP endpoint for querying recorded event data by field values.',
                 'Celery app which polls for events pushed in a Redis queue and pushes the processed data to InfluxDB bucket.',
                 'A typer CLI application which allows easy management of the API along with all its resources.',
                 'Containerized databases managed via docker compose and persistent volumes.',
             ],
+            toolsText: 'Tools & technologies that I have used in this project:',
             tools: [
                 'Backend: Python (frameworks used: fastapi).',
                 'Consumer: Python (Celery)',
@@ -258,12 +270,14 @@ export const projectsStore = readable({
                     text: 'Develop a versatile web scraping tool for extracting data from the Japanese Adidas website aiming to streamline the data collection and preprocessing process.',
                 },
             ],
+            pointsText: 'Principal focus areas of this project:',
             points: [
                 'Scrapy web crawler with automated data preprocessing & validation, ETL (Extract Transform Load), and data modeling workloads.',
                 'Versioning system (for preprocessed & final reports along with other important things like logs for monitoring purposes and scraping session statistics).',
                 'Fully automated reporting tools (email session reports with KPIs) and visualization (provide visualization about KPIs and insights about scraping session performance).',
                 'typer CLI application to provide central management of all the features.',
             ],
+            toolsText: 'Tools & technologies that I have used in this project:',
             tools: [
                 'Web crawlers and scrapers: Python (framework used: Scrapy, openpyxl).',
                 'Data: pydantic and NumPy ecosystem (NumPy, pandas), Microsoft Excel.',
@@ -304,6 +318,7 @@ export const volunteerStore = readable({
                     text: 'Nov 2019 - Jan 2021',
                 },
             ],
+            pointsText: 'Responsibilities that I have undertaken in this role:',
             points: [
                 'Tutored Chinese high school and college students in IELTS preparation for studying abroad.',
                 'Conducted both online and offline classes to provide flexible learning options for students.',
@@ -324,6 +339,7 @@ export const volunteerStore = readable({
                     text: 'Sep 2019 - Jan 2020',
                 },
             ],
+            pointsText: 'Responsibilities that I have undertaken in this role:',
             points: [
                 'Volunteered to teach English to children aged 3-6 years.',
                 'Fostered a positive and engaging learning environment by incorporating games, rhymes, and interactive activities to encourage active participation and interest in learning.',
@@ -344,6 +360,7 @@ export const awardsStore = readable({
                     text: 'Yangzhou, Jiangsu, China',
                 },
             ],
+            pointsText: 'Scholarships that I have received during my time at Yangzhou University:',
             points: [
                 'Jiangsu Provincial Government Scholarship for Academic Excellence (academic year 2019-20).',
                 'Jiangsu Provincial Government Scholarship for Academic Excellence (academic year 2020-21).',
@@ -363,6 +380,7 @@ export const awardsStore = readable({
                     text: 'Apr 2022 - Mar 2023',
                 },
             ],
+            pointsText: 'Courses that I have completed in this track:',
             points: [
                 'Consists of Courses like Data Science Basics, Data Literacy, Data Strategy, Microsoft Excel Basic & Advanced courses, Statistics, Data Visualization, and more.',
             ],
@@ -381,6 +399,7 @@ export const awardsStore = readable({
                     text: 'Apr 2022 - Mar 2023',
                 },
             ],
+            pointsText: 'Courses that I have completed in this track:',
             points: [
                 'Consists of Courses like Data Science Basics, Microsoft Excel Basic & Advanced courses, Statistics, Data Visualization, SQL, Python, NumPy, pandas, and more.',
             ],
@@ -399,6 +418,7 @@ export const awardsStore = readable({
                     text: 'Apr 2022 - Mar 2023',
                 },
             ],
+            pointsText: 'Courses that I have completed in this track:',
             points: [
                 'Consists of Courses like Data Science Basics, Mathematics, Statistics, Probability, Data Visualization, SQL, Python, Machine learning & Deep learning in Python, and more.',
             ],
@@ -417,6 +437,7 @@ export const awardsStore = readable({
                     text: 'Dec 2021',
                 },
             ],
+            pointsText: 'Score distribution at my IELTS Academic exam:',
             points: [
                 'Overall score 8.0 (Listening: 8.0, Reading: 8.5, Writing: 6.5, Speaking: 8.5)',
             ],
@@ -435,6 +456,7 @@ export const awardsStore = readable({
                     text: 'Dec 2019',
                 },
             ],
+            pointsText: 'Score distribution at my HSK4 test:',
             points: [
                 'Scored 264 out of 300 (Listening: 90 out of 100, Reading: 90 out of 100, Writing: 84 out of 100)',
             ],

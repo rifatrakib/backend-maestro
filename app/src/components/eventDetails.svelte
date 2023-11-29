@@ -18,13 +18,13 @@
     {#each event.metadata as {icon, text}}
         <Info icon={icon} label={text} alignment={icon.includes('objective.svg') ? 'top' : 'center'} />
     {/each}
-    <Info icon={'/icons/responsibilities.svg'} label={'Responsibilities that I have undertaken in this role:'} />
+    <Info icon={'/icons/responsibilities.svg'} label={event.pointsText} />
     <Points points={event.points} />
     {#if event.projects && event.projects.length > 0}
-        <Info icon={'/icons/project.svg'} label={'Projects that I have led or worked on while in this role:'} />
+        <Info icon={'/icons/project.svg'} label={event.projectsText} />
     {/if}
     {#if event.tools && event.tools.length > 0}
-        <Info icon={'/icons/tools.svg'} label={'Tools & technologies that I have used in this project:'} />
+        <Info icon={'/icons/tools.svg'} label={event.toolsText} />
         <Points points={event.tools} />
     {/if}
 </section>
