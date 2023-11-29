@@ -274,3 +274,16 @@ export const projectsStore = readable({
         },
     ],
 });
+
+export const skillsStore = readable([
+    'Python (Web Scraping & Crawling, ETL, Data Analysis & Visualization, Data Modeling)',
+    'Python Web Development (fastapi, Django, flask)',
+    'fastapi & pydantic ecosystem, Celery',
+    'NumPy ecosystem (NumPy, pandas, dask, matplotlib, seaborn, scikit-learn etc.)',
+    'SQL Relational Databases (PostgreSQL, MySQL, SQL server & more), Redis, InfluxDB',
+    'MongoDB (Aggregation framework, geospatial features, time series)',
+    'Amazon Web Services (AWS)',
+    'Git, GitHub, GitHub Actions',
+    'Docker, Elastic Stack (ELK), Terraform',
+    'Microsoft Power BI, Microsoft Excel',
+]);

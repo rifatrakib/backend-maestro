@@ -4,15 +4,19 @@
     import Timeline from '../../components/timeline.svelte';
     import Header from '../../components/header.svelte';
     import Infocard from '../../components/infocard.svelte';
+    import Points from '../../components/points.svelte';
     import Text from '../../components/text.svelte';
     import Namecard from '../../components/namecard.svelte';
-    import { workStore, educationStore, projectsStore } from './store.js';
+    import { workStore, educationStore, projectsStore, skillsStore } from './store.js';
     import { infocardStore } from '../home/store';
 
     export let transitionParams;
 
     let summary;
     const infoUnsub = infocardStore.subscribe(value => summary = value);
+
+    let skills;
+    const skillsUnsub = skillsStore.subscribe(value => skills = value);
 
     let work;
     const workUnsub = workStore.subscribe(value => work = value.events);
@@ -25,6 +29,7 @@
 
     onDestroy(() => {
         infoUnsub();
+        skillsUnsub();
         workUnsub();
         eduUnsub();
         projectsUnsub();
@@ -58,7 +63,7 @@
     section.section-heading {
         display: flex;
         flex-direction: column;
-        justify-content: baseline;
+        justify-content: flex-start;
         align-items: baseline;
         margin-left: 2rem;
     }
@@ -75,6 +80,12 @@
                 <Header text={'Summary'} isSectionHeader={false} cvSection={true} />
                 <Text text={summary.text} size={1} align={'justify'} placement={'infobox cv'} />
             </section>
+        </section>
+        <section class="experience">
+            <section class="section-heading">
+                <Header text={'Skills'} isSectionHeader={false} cvSection={true} />
+            </section>
+            <Points points={skills} isCV={true} />
         </section>
         <section class="experience">
             <section class="section-heading">
