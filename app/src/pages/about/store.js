@@ -287,3 +287,47 @@ export const skillsStore = readable([
     'Docker, Elastic Stack (ELK), Terraform',
     'Microsoft Power BI, Microsoft Excel',
 ]);
+
+export const volunteerStore = readable({
+    events: [
+        {
+            icon: '/icons/volunteer.svg',
+            name: 'IELTS Instructor',
+            subheader: 'Changchun Kindergarten',
+            metadata: [
+                {
+                    icon: '/icons/location.svg',
+                    text: 'Yangzhou, Jiangsu, China',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'Nov 2019 - Jan 2021',
+                },
+            ],
+            points: [
+                'Tutored Chinese high school and college students in IELTS preparation for studying abroad.',
+                'Conducted both online and offline classes to provide flexible learning options for students.',
+                "Developed customized lesson plans based on students' proficiency levels and learning needs and provided regular feedback and constructive criticism.",
+            ],
+        },
+        {
+            icon: '/icons/volunteer.svg',
+            name: 'ESL Teacher',
+            subheader: 'Changchun Kindergarten',
+            metadata: [
+                {
+                    icon: '/icons/location.svg',
+                    text: 'Yangzhou, Jiangsu, China',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'Sep 2019 - Jan 2020',
+                },
+            ],
+            points: [
+                'Volunteered to teach English to children aged 3-6 years.',
+                'Fostered a positive and engaging learning environment by incorporating games, rhymes, and interactive activities to encourage active participation and interest in learning.',
+            ],
+        },
+    ],
+});
