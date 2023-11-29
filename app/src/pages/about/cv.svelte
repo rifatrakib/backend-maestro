@@ -7,7 +7,7 @@
     import Points from '../../components/points.svelte';
     import Text from '../../components/text.svelte';
     import Namecard from '../../components/namecard.svelte';
-    import { workStore, educationStore, projectsStore, skillsStore, volunteerStore } from './store.js';
+    import { workStore, educationStore, projectsStore, skillsStore, volunteerStore, awardsStore } from './store.js';
     import { infocardStore } from '../home/store';
 
     export let transitionParams;
@@ -30,6 +30,9 @@
     let volunteer;
     const volunteerUnsub = volunteerStore.subscribe(value => volunteer = value.events);
 
+    let awards;
+    const awardsUnsub = awardsStore.subscribe(value => awards = value.events);
+
     onDestroy(() => {
         infoUnsub();
         skillsUnsub();
@@ -37,6 +40,7 @@
         eduUnsub();
         projectsUnsub();
         volunteerUnsub();
+        awardsUnsub();
     });
 </script>
 
@@ -114,6 +118,12 @@
                 <Header text={'Volunteer Activities'} isSectionHeader={false} cvSection={true} />
             </section>
             <Timeline events={volunteer} />
+        </section>
+        <section class="experience">
+            <section class="section-heading">
+                <Header text={'Awards & Certifications'} isSectionHeader={false} cvSection={true} />
+            </section>
+            <Timeline events={awards} />
         </section>
     </section>
 </section>

@@ -331,3 +331,113 @@ export const volunteerStore = readable({
         },
     ],
 });
+
+export const awardsStore = readable({
+    events: [
+        {
+            icon: '/icons/awards.svg',
+            name: 'Academic Scholarship',
+            subheader: 'Yangzhou University',
+            metadata: [
+                {
+                    icon: '/icons/location.svg',
+                    text: 'Yangzhou, Jiangsu, China',
+                },
+            ],
+            points: [
+                'Jiangsu Provincial Government Scholarship for Academic Excellence (academic year 2019-20).',
+                'Jiangsu Provincial Government Scholarship for Academic Excellence (academic year 2020-21).',
+            ],
+        },
+        {
+            icon: '/icons/certification.svg',
+            name: 'Business Analyst Track Certificate',
+            subheader: '365 Data Science',
+            metadata: [
+                {
+                    icon: '/icons/reference.svg',
+                    text: 'https://learn.365datascience.com/certificates/DD-89BB29CA1B/',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'Apr 2022 - Mar 2023',
+                },
+            ],
+            points: [
+                'Consists of Courses like Data Science Basics, Data Literacy, Data Strategy, Microsoft Excel Basic & Advanced courses, Statistics, Data Visualization, and more.',
+            ],
+        },
+        {
+            icon: '/icons/certification.svg',
+            name: 'Data Analyst Track Certificate',
+            subheader: '365 Data Science',
+            metadata: [
+                {
+                    icon: '/icons/reference.svg',
+                    text: 'https://learn.365datascience.com/certificates/DD-01E8992114/',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'Apr 2022 - Mar 2023',
+                },
+            ],
+            points: [
+                'Consists of Courses like Data Science Basics, Microsoft Excel Basic & Advanced courses, Statistics, Data Visualization, SQL, Python, NumPy, pandas, and more.',
+            ],
+        },
+        {
+            icon: '/icons/certification.svg',
+            name: 'Data Scientist Track Certificate',
+            subheader: '365 Data Science',
+            metadata: [
+                {
+                    icon: '/icons/reference.svg',
+                    text: 'https://learn.365datascience.com/certificates/DD-C6129672EF/',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'Apr 2022 - Mar 2023',
+                },
+            ],
+            points: [
+                'Consists of Courses like Data Science Basics, Mathematics, Statistics, Probability, Data Visualization, SQL, Python, Machine learning & Deep learning in Python, and more.',
+            ],
+        },
+        {
+            icon: '/icons/certification.svg',
+            name: 'IELTS Academic',
+            subheader: 'British Council',
+            metadata: [
+                {
+                    icon: '/icons/reference.svg',
+                    text: 'https://learn.365datascience.com/certificates/DD-C6129672EF/',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'Dec 2021',
+                },
+            ],
+            points: [
+                'Overall score 8.0 (Listening: 8.0, Reading: 8.5, Writing: 6.5, Speaking: 8.5)',
+            ],
+        },
+        {
+            icon: '/icons/certification.svg',
+            name: 'HSK4',
+            subheader: 'Confucius Institute Headquarters (Hanban)',
+            metadata: [
+                {
+                    icon: '/icons/reference.svg',
+                    text: 'https://learn.365datascience.com/certificates/DD-C6129672EF/',
+                },
+                {
+                    icon: '/icons/duration.svg',
+                    text: 'Dec 2019',
+                },
+            ],
+            points: [
+                'Scored 264 out of 300 (Listening: 90 out of 100, Reading: 90 out of 100, Writing: 84 out of 100)',
+            ],
+        },
+    ],
+});
