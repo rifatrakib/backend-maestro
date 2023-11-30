@@ -46,8 +46,6 @@
         volunteerUnsub();
         awardsUnsub();
     });
-
-    const downloadCV = () => print();
 </script>
 
 <style>
@@ -84,7 +82,7 @@
 </style>
 
 <section class="container infocard" in:fly={transitionParams.in} out:fade={transitionParams.out}>
-    <Infocard header={headings.header} text={headings.text} isCV={true} on:download={downloadCV} />
+    <Infocard header={headings.header} text={headings.text} />
     <section class="timeline">
         <section class="experience">
             <Namecard />
