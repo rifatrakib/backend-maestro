@@ -113,6 +113,74 @@ export const workStore = readable({
                         'Quick analysis and Visualization: Microsoft Power BI, Microsoft Excel.',
                     ],
                 },
+                {
+                    icon: '/icons/work.svg',
+                    name: 'OAuth2.0-compliant Authentication Service',
+                    subheader: 'PropCloud AS',
+                    metadata: [
+                        {
+                            icon: '/icons/genre.svg',
+                            text: 'API Engineering, Authentication & Authorization, Security & Access Control',
+                        },
+                        {
+                            icon: '/icons/duration.svg',
+                            text: 'Sep 2023 - Nov 2023',
+                        },
+                        {
+                            icon: '/icons/objective.svg',
+                            text: 'Rebuild the authentication service into an enhanced API gateway, gradually eliminating legacy monolithic components, achieving OAuth 2.0 compliance, and enabling seamless Single Sign-On integration with diverse providers, all without disrupting production services.',
+                        },
+                    ],
+                    pointsText: 'Responsibilities that I have undertaken in this role:',
+                    points: [
+                        'Overhaul the authentication service architecture, gradually phasing out legacy monolithic components for improved modularity.',
+                        'Implement OAuth 2.0 standards to provide a secure and standardized authentication and authorization framework.',
+                        'Enable Single Sign-On (SSO) integration with various third-party identity providers to enhance user experience.',
+                        'Collaborate with microservices teams for seamless integration and minimal disruption to existing services.',
+                        'Implement monitoring, troubleshoot issues, ensure security through timely patches and updates, and provide comprehensive documentation for developers.',
+                    ],
+                    toolsText: 'Tools & technologies that I have used in this project:',
+                    tools: [
+                        'Backend: RESTful API with Python (fastapi, SQLalchemy, pydantic & many more).',
+                        'Databases: PostgreSQL, Redis (cache & message broker).',
+                        'SSO Providers: Google, Microsoft, Facebook',
+                        'Logging & Monitoring: Elastic Stack (Elasticsearch, Logstash, Kibana), Application Performance Monitoring (APM) server.',
+                        'Infrastructure: AWS (Amazon RDS, AWS ECS, AWS secretsmanager, etc.), Terraform, GitHub Actions.',
+                    ],
+                },
+                {
+                    icon: '/icons/work.svg',
+                    name: 'Database Migration',
+                    subheader: 'PropCloud AS',
+                    metadata: [
+                        {
+                            icon: '/icons/genre.svg',
+                            text: 'System Design & Data Modeling',
+                        },
+                        {
+                            icon: '/icons/duration.svg',
+                            text: 'Oct 2023 - Present',
+                        },
+                        {
+                            icon: '/icons/objective.svg',
+                            text: "Migrate the user data from MySQL and geospatial data from MongoDB to PostgreSQL to align with revised authentication and geospatial analysis requirements and leverage PostgreSQL's advanced features.",
+                        },
+                    ],
+                    pointsText: 'Responsibilities that I have undertaken in this role:',
+                    points: [
+                        'Analyze and map the existing MySQL schema to new models to be used with PostgreSQL, ensuring a seamless transition and compatibility with geospatial data.',
+                        'Conduct thorough testing to validate the integrity of migrated data, emphasizing the correctness and accuracy of user and geospatial information within the PostgreSQL environment.',
+                        'Implement fine-grained access controls and security measures in PostgreSQL to align with the security requirements of the authentication service and protect sensitive geospatial information.',
+                        'Strategize and execute the migration process with meticulous planning to ensure a seamless transition without requiring any maintenance window in the production environment, minimizing impact on ongoing operations.',
+                    ],
+                    toolsText: 'Tools & technologies that I have used in this project:',
+                    tools: [
+                        'Databases: PostgreSQL, MySQL, MongoDB.',
+                        'Data preparation: SQLalchemy, pydantic, NumPy ecosystem (NumPy, pandas), beanie, etc.',
+                        'Scheduled asynchronous tasks: Celery with Redis acting as both the backend and the broker.',
+                        'Infrastructure: AWS (Amazon RDS, AWS ECS, AWS secretsmanager, etc.), Terraform, GitHub Actions.',
+                    ],
+                },
             ],
         },
         {
