@@ -29,18 +29,18 @@ export const workStore = readable({
                     text: 'Aug 2021 - Present',
                 },
             ],
-            pointsText: 'Responsibilities that I have undertaken in this role:',
+            pointsText: 'Highlights of some of the responsibilities that I have undertaken in this role:',
             points: [
-                'Built Python API servers using a microservice architecture with an OAuth2 authentication gateway for secure access, emphasizing scalable solutions.',
-                'Provisioned AWS ECS clusters and services with Terraform and automated application deployment with GitHub Actions in Docker containers with ELK logging & monitoring maintaining TDD.',
-                'Utilized various AWS services to build and deploy automated scraping and ETL pipelines, as well as to store, manage, and analyze data.',
-                'Developed complex & dynamic data retrieval pipelines, utilizing SQL and MongoDB Aggregation framework to ensure efficient data management and retrieval.',
-                'Implemented geospatial data analytics backends utilizing MongoDB geospatial features.',
-                'Launched data modeling process and streamlined a generalized data validation for multiple teams, driving significant productivity and quality gains.',
-                'Participated in designing application infrastructure and deploying a comprehensive, highly available, and scalable hybrid microservices-based backend system on AWS that delivered reduced data loss and robust disaster recovery capabilities.',
-                'Deployed MySQL databases on AWS RDS, utilizing read replicas and an RDS proxy to reduce database operations and significantly enhance system performance.',
+                'Built and productionized APIs and microservices ensuring secure access and emphasizing scalable solutions.',
+                'Provisioned AWS ECS clusters and services with Terraform and automated application deployment with GitHub Actions followed by automated testing.',
+                'Utilized various AWS services to build and deploy scraping and ETL pipelines, as well as to store, manage, and analyze data.',
+                'Developed data retrieval pipelines, utilizing SQL and MongoDB Aggregation framework to ensure efficient data management and retrieval.',
+                'Implemented geospatial data analytics backends utilizing MongoDB and PostGIS geospatial features.',
+                'Reformed data modeling process and streamlined a generalized data validation for multiple teams, driving significant productivity and quality gains.',
+                'Participated in designing application infrastructure and deploying on AWS that delivered reduced data loss and robust disaster recovery capabilities.',
+                'Deployed MySQL and PostgreSQL databases on Amazon RDS, utilizing read replicas and an RDS proxy to significantly enhance system performance.',
             ],
-            projectsText: 'Projects that I have led or worked on while in this role:',
+            projectsText: 'Some projects that I have led or worked on while in this role:',
             projects: [
                 {
                     icon: '/icons/work.svg',
@@ -115,7 +115,7 @@ export const workStore = readable({
                 },
                 {
                     icon: '/icons/work.svg',
-                    name: 'OAuth2.0-compliant Authentication Service',
+                    name: 'OAuth2.0-compliant Authentication Gateway',
                     subheader: 'PropCloud AS',
                     metadata: [
                         {
@@ -203,8 +203,32 @@ export const workStore = readable({
             ],
             pointsText: 'Responsibilities that I have undertaken in this role:',
             points: [
-                'Built the frontend of the company website using HTML, CSS, & JavaScript.',
+                'Built the frontend of the company website using Svelte.',
                 'Get familiar with web server technologies and deployment of websites and databases in the cloud.',
+            ],
+            projectsText: 'Project that I have worked on while in this role:',
+            projects: [
+                {
+                    icon: '/icons/work.svg',
+                    name: 'Building a static website',
+                    subheader: 'PropCloud AS',
+                    metadata: [
+                        {
+                            icon: '/icons/duration.svg',
+                            text: 'Sep 2019 - Nov 2019',
+                        },
+                        {
+                            icon: '/icons/objective.svg',
+                            text: 'Build & design the frontend components of the company website using Svelte following the UI design provided.',
+                        },
+                    ],
+                    pointsText: 'Focal points worked on in this project as an intern:',
+                    points: [
+                        'Familiarize myself with Vanilla JavaScript and Svelte along with its ecosystem and development principles.',
+                        'Understanding the benefits of building small reusable components and build the frontend components of the company website.',
+                        'Getting to know application development lifecycle and deployment of websites and databases in the cloud.',
+                    ],
+                },
             ],
         },
     ],
@@ -240,6 +264,51 @@ export const educationStore = readable({
                 'Multiple awards for academic excellence.',
                 'Dissertation on the intricacies of full-text search engines and recommender systems.',
                 'Built multifaceted drone equipped with telemetry, 3D photography, and more.',
+            ],
+            projectsText: 'Project that I have worked on during my undergraduate studies:',
+            projects: [
+                {
+                    icon: '/icons/academic.svg',
+                    name: 'Search Engine & Recommender System',
+                    metadata: [
+                        {
+                            icon: '/icons/duration.svg',
+                            text: 'Sep 2020 - May 2021',
+                        },
+                        {
+                            icon: '/icons/objective.svg',
+                            text: 'Design and implement a search engine and recommender system as well as explore page ranking algorithms and their applications in search engines.',
+                        },
+                    ],
+                    pointsText: 'Targeted learning outcomes from this project:',
+                    points: [
+                        'Explore software engineering driving search engines, including the various components and their functions, as well as the usage of page ranking algorithms in search engines.',
+                        'Learn about diffrent types of machine learning models and recommender systems and their applications in a search engine.',
+                        'Learn to build web crawlers and scrapers to collect data from the web and build a search engine with the collected data.',
+                        'Learn to build pipelines for data collection, cleaning & sanitizing, and also to index the data as needed by different page ranking algorithms.',
+                    ],
+                },
+                {
+                    icon: '/icons/academic.svg',
+                    name: 'Drone Construction & Design',
+                    metadata: [
+                        {
+                            icon: '/icons/duration.svg',
+                            text: 'Mar 2019 - Jun 2019',
+                        },
+                        {
+                            icon: '/icons/objective.svg',
+                            text: 'Design & build a multifaceted hexcopter with telemetry, 3D photography, and more.',
+                        },
+                    ],
+                    pointsText: 'Targeted learning outcomes from this project:',
+                    points: [
+                        'Learn basics of drone construction and design, including the various components and their functions, as well as the intricacies of drone flight control.',
+                        'Learn basics of IoT to provide the necessary telemetry and control the drone.',
+                        'Collaborate with team members from different departments to ensure a holistic approach to the project and learn to work in a team environment as well as create a shared learning buffer across departments.',
+                        'Explore the various applications of drones in different industries and learn to deal with trade-offs between different design choices.',
+                    ],
+                },
             ],
         },
     ],
