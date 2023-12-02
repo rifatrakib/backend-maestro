@@ -44,73 +44,35 @@ export const workStore = readable({
             projects: [
                 {
                     icon: '/icons/work.svg',
-                    name: 'PropCloud',
-                    subheader: 'PropCloud AS',
-                    link: 'https://propcloud.no/',
-                    metadata: [
-                        {
-                            icon: '/icons/genre.svg',
-                            text: 'Backend & Infrastructure Engineering, Database Design & Optimization, Data Modeling & Analytics',
-                        },
-                        {
-                            icon: '/icons/reference.svg',
-                            text: 'https://propcloud.no/',
-                        },
-                        {
-                            icon: '/icons/duration.svg',
-                            text: 'Aug 2021 - Oct 2022',
-                        },
-                        {
-                            icon: '/icons/objective.svg',
-                            text: "Design and build a scalable backend infrastructure for a B2B web app providing advanced real estate and geospatial data analysis, leveraging cutting-edge technologies and industry best practices to ensure a seamless user experience and meet the target audience's needs.",
-                        },
-                    ],
-                    pointsText: 'Responsibilities that I have undertaken in this role:',
-                    points: [
-                        'Development of multiple microservices focused on providing comprehensive data analytics and geospatial analysis solutions on large volumes of real estate information.',
-                        'Developed charting framework, leveraging Python, MongoDB, and Redis, with D3.js frontend.',
-                        'Streamlined generalized data validation across teams by leveraging pydantic-based modules and MongoDB schema validation, resulting in improved data quality and productivity gains.',
-                        'Designed and deployed scalable and highly available backend systems on AWS provisioned with Terraform, incorporating ELK stack for logging & monitoring, GitHub Actions for CI/CD, and optimizing database performance with AWS RDS read replicas and RDS proxy.',
-                    ],
-                    toolsText: 'Tools & technologies that I have used in this project:',
-                    tools: [
-                        'Backend: Python (frameworks used: flask, fastapi).',
-                        'Data analysis: Leveraging database functions, NumPy ecosystem (NumPy, pandas, dask).',
-                        'Validation works: pydantic-based public & in-house private packages.',
-                        'Databases: MongoDB (semi-structured), MySQL (structured), Redis (cache & message broker).',
-                        'Infrastructure: AWS & Elastic cloud services, Terraform, automated testing with pytest as part of GitHub Actions CI/CD pipeline.',
-                    ],
-                },
-                {
-                    icon: '/icons/work.svg',
-                    name: 'Area Analysis',
+                    name: 'Database Migration',
                     subheader: 'PropCloud AS',
                     metadata: [
                         {
                             icon: '/icons/genre.svg',
-                            text: 'Data Engineering & Analysis, Data Modeling',
+                            text: 'System Design & Data Modeling',
                         },
                         {
                             icon: '/icons/duration.svg',
-                            text: 'Feb 2022 - Apr 2023',
+                            text: 'Oct 2023 - Present',
                         },
                         {
                             icon: '/icons/objective.svg',
-                            text: 'Develop and implement a pipeline for the automated collection of real estate and geospatial data utilizing scrapers, as well as incorporating necessary pre-processing, ETL, and post-processing tasks.',
+                            text: "Migrate the user data from MySQL and geospatial data from MongoDB to PostgreSQL to align with revised authentication and geospatial analysis requirements and leverage PostgreSQL's advanced features.",
                         },
                     ],
                     pointsText: 'Responsibilities that I have undertaken in this role:',
                     points: [
-                        'Built scrapers with Scrapy to collect large volumes of structured and unstructured geospatial & real estate data from various providers, including the Norwegian Mapping Authority.',
-                        'Implement end-to-end data pipeline with data collection, cleaning & sanitizing, and ETL steps.',
-                        'Implemented industry-standard security protocols and leveraged AWS security features to ensure secure data transmission, storage, and access throughout the data lifecycle.',
+                        'Analyze and map the existing MySQL schema to new models to be used with PostgreSQL, ensuring a seamless transition and compatibility with geospatial data.',
+                        'Conduct thorough testing to validate the integrity of migrated data, emphasizing the correctness and accuracy of user and geospatial information within the PostgreSQL environment.',
+                        'Implement fine-grained access controls and security measures in PostgreSQL to align with the security requirements of the authentication service and protect sensitive geospatial information.',
+                        'Strategize and execute the migration process with meticulous planning to ensure a seamless transition without requiring any maintenance window in the production environment, minimizing impact on ongoing operations.',
                     ],
                     toolsText: 'Tools & technologies that I have used in this project:',
                     tools: [
-                        'Web crawlers and scrapers: Python (frameworks and libraries used: Scrapy, httpx, & more).',
-                        'Data: pydantic and NumPy ecosystem (NumPy, pandas, dask), MongoDB, AWS glue & others.',
-                        'Storage: Amazon S3, MySQL, MongoDB.',
-                        'Quick analysis and Visualization: Microsoft Power BI, Microsoft Excel.',
+                        'Databases: PostgreSQL, MySQL, MongoDB.',
+                        'Data preparation: SQLalchemy, pydantic, NumPy ecosystem (NumPy, pandas), beanie, etc.',
+                        'Scheduled asynchronous tasks: Celery with Redis acting as both the backend and the broker.',
+                        'Infrastructure: AWS (Amazon RDS, AWS ECS, AWS secretsmanager, etc.), Terraform, GitHub Actions.',
                     ],
                 },
                 {
@@ -150,35 +112,73 @@ export const workStore = readable({
                 },
                 {
                     icon: '/icons/work.svg',
-                    name: 'Database Migration',
+                    name: 'Area Analysis',
                     subheader: 'PropCloud AS',
                     metadata: [
                         {
                             icon: '/icons/genre.svg',
-                            text: 'System Design & Data Modeling',
+                            text: 'Data Engineering & Analysis, Data Modeling',
                         },
                         {
                             icon: '/icons/duration.svg',
-                            text: 'Oct 2023 - Present',
+                            text: 'Feb 2022 - Apr 2023',
                         },
                         {
                             icon: '/icons/objective.svg',
-                            text: "Migrate the user data from MySQL and geospatial data from MongoDB to PostgreSQL to align with revised authentication and geospatial analysis requirements and leverage PostgreSQL's advanced features.",
+                            text: 'Develop and implement a pipeline for the automated collection of real estate and geospatial data utilizing scrapers, as well as incorporating necessary pre-processing, ETL, and post-processing tasks.',
                         },
                     ],
                     pointsText: 'Responsibilities that I have undertaken in this role:',
                     points: [
-                        'Analyze and map the existing MySQL schema to new models to be used with PostgreSQL, ensuring a seamless transition and compatibility with geospatial data.',
-                        'Conduct thorough testing to validate the integrity of migrated data, emphasizing the correctness and accuracy of user and geospatial information within the PostgreSQL environment.',
-                        'Implement fine-grained access controls and security measures in PostgreSQL to align with the security requirements of the authentication service and protect sensitive geospatial information.',
-                        'Strategize and execute the migration process with meticulous planning to ensure a seamless transition without requiring any maintenance window in the production environment, minimizing impact on ongoing operations.',
+                        'Built scrapers with Scrapy to collect large volumes of structured and unstructured geospatial & real estate data from various providers, including the Norwegian Mapping Authority.',
+                        'Implement end-to-end data pipeline with data collection, cleaning & sanitizing, and ETL steps.',
+                        'Implemented industry-standard security protocols and leveraged AWS security features to ensure secure data transmission, storage, and access throughout the data lifecycle.',
                     ],
                     toolsText: 'Tools & technologies that I have used in this project:',
                     tools: [
-                        'Databases: PostgreSQL, MySQL, MongoDB.',
-                        'Data preparation: SQLalchemy, pydantic, NumPy ecosystem (NumPy, pandas), beanie, etc.',
-                        'Scheduled asynchronous tasks: Celery with Redis acting as both the backend and the broker.',
-                        'Infrastructure: AWS (Amazon RDS, AWS ECS, AWS secretsmanager, etc.), Terraform, GitHub Actions.',
+                        'Web crawlers and scrapers: Python (frameworks and libraries used: Scrapy, httpx, & more).',
+                        'Data: pydantic and NumPy ecosystem (NumPy, pandas, dask), MongoDB, AWS glue & others.',
+                        'Storage: Amazon S3, MySQL, MongoDB.',
+                        'Quick analysis and Visualization: Microsoft Power BI, Microsoft Excel.',
+                    ],
+                },
+                {
+                    icon: '/icons/work.svg',
+                    name: 'PropCloud',
+                    subheader: 'PropCloud AS',
+                    link: 'https://propcloud.no/',
+                    metadata: [
+                        {
+                            icon: '/icons/genre.svg',
+                            text: 'Backend & Infrastructure Engineering, Database Design & Optimization, Data Modeling & Analytics',
+                        },
+                        {
+                            icon: '/icons/reference.svg',
+                            text: 'https://propcloud.no/',
+                        },
+                        {
+                            icon: '/icons/duration.svg',
+                            text: 'Aug 2021 - Oct 2022',
+                        },
+                        {
+                            icon: '/icons/objective.svg',
+                            text: "Design and build a scalable backend infrastructure for a B2B web app providing advanced real estate and geospatial data analysis, leveraging cutting-edge technologies and industry best practices to ensure a seamless user experience and meet the target audience's needs.",
+                        },
+                    ],
+                    pointsText: 'Responsibilities that I have undertaken in this role:',
+                    points: [
+                        'Development of multiple microservices focused on providing comprehensive data analytics and geospatial analysis solutions on large volumes of real estate information.',
+                        'Developed charting framework, leveraging Python, MongoDB, and Redis, with D3.js frontend.',
+                        'Streamlined generalized data validation across teams by leveraging pydantic-based modules and MongoDB schema validation, resulting in improved data quality and productivity gains.',
+                        'Designed and deployed scalable and highly available backend systems on AWS provisioned with Terraform, incorporating ELK stack for logging & monitoring, GitHub Actions for CI/CD, and optimizing database performance with AWS RDS read replicas and RDS proxy.',
+                    ],
+                    toolsText: 'Tools & technologies that I have used in this project:',
+                    tools: [
+                        'Backend: Python (frameworks used: flask, fastapi).',
+                        'Data analysis: Leveraging database functions, NumPy ecosystem (NumPy, pandas, dask).',
+                        'Validation works: pydantic-based public & in-house private packages.',
+                        'Databases: MongoDB (semi-structured), MySQL (structured), Redis (cache & message broker).',
+                        'Infrastructure: AWS & Elastic cloud services, Terraform, automated testing with pytest as part of GitHub Actions CI/CD pipeline.',
                     ],
                 },
             ],
@@ -286,6 +286,26 @@ export const educationStore = readable({
                         'Learn about diffrent types of machine learning models and recommender systems and their applications in a search engine.',
                         'Learn to build web crawlers and scrapers to collect data from the web and build a search engine with the collected data.',
                         'Learn to build pipelines for data collection, cleaning & sanitizing, and also to index the data as needed by different page ranking algorithms.',
+                    ],
+                },
+                {
+                    icon: '/icons/academic.svg',
+                    name: 'Web Application Development',
+                    metadata: [
+                        {
+                            icon: '/icons/duration.svg',
+                            text: 'Jun 2020 - Aug 2020',
+                        },
+                        {
+                            icon: '/icons/objective.svg',
+                            text: 'Design and implement a university management system using C# and ASP.NET MVC framework.',
+                        },
+                    ],
+                    pointsText: 'Targeted learning outcomes from this project:',
+                    points: [
+                        'Learn to build dynamic web applications with role-based access control (RBAC)  and the MVC architecture using C# and ASP.NET MVC framework.',
+                        'Learn about strengths of Web Assembly and its applications in web development using C# and its interoperability with JavaScript.',
+                        'Learn to design and optimize a complete system for a web application, including the database, backend, caching layers, SSR, and more.',
                     ],
                 },
                 {
