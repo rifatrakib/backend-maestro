@@ -37,6 +37,14 @@
         line-height: 1.2rem;
         color: #ffffff90;
     }
+
+    @media screen and (max-width: 768px) {
+        section.footer-container {
+            width: 100%;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
 </style>
 
 <footer>

@@ -86,6 +86,16 @@
         width: 1.2rem;
         height: 1.2rem;
     }
+
+    @media screen and (max-width: 768px) {
+        button:not(.logo):not(.has-icon) {
+            margin: 0.5em;
+        }
+
+        button.has-icon {
+            margin: 0.5rem;
+        }
+    }
 </style>
 
 {#if isLogo}

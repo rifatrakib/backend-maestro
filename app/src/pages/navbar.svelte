@@ -46,6 +46,20 @@
         display: flex;
         justify-content: space-evenly;
     }
+
+    @media screen and (max-width: 768px) {
+        nav {
+            width: 100%;
+            padding: 1rem;
+            justify-content: space-between;
+        }
+
+        nav section.nav-buttons {
+            flex-direction: column;
+            margin: 0;
+            display: none;
+        }
+    }
 </style>
 
 <div>
