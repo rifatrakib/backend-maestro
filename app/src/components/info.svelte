@@ -38,6 +38,13 @@
         width: 2rem;
         height: 2rem;
     }
+
+    @media screen and (max-width: 768px) {
+        section img.header {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
 </style>
 
 <section class="align-{alignment}" class:namecard={isNamecard}>

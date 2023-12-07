@@ -32,6 +32,14 @@
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
         box-sizing: border-box;
     }
+
+    @media screen and (max-width: 768px) {
+        section.timeline {
+            background-color: unset;
+            box-shadow: unset;
+            padding: 0;
+        }
+    }
 </style>
 
 <section class="container infocard" in:fly={transitionParams.in} out:fade={transitionParams.out}>

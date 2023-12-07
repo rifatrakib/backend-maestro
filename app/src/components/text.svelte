@@ -72,6 +72,11 @@
             font-size: 1rem;
             line-height: 1.6rem;
         }
+
+        p.subtitle {
+            padding: 0;
+            text-align: justify;
+        }
     }
 </style>
 

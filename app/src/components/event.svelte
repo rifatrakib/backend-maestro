@@ -34,6 +34,27 @@
     section.project:hover {
         background-color: #1c1c1c;
     }
+
+    @media screen and (max-width: 768px) {
+        section.details-container {
+            margin-left: 0;
+            padding-left: 0;
+            border-left: none;
+        }
+
+        section.project-container {
+            margin: 0.5rem 0 0.5rem 0;
+        }
+
+        section.project {
+            margin-left: 0;
+            padding: 0.5rem 0;
+        }
+
+        section.project:hover {
+            background-color: unset;
+        }
+    }
 </style>
 
 <section>

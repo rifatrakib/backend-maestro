@@ -17,6 +17,16 @@
     section.event:hover {
         background-color: #ffffff10;
     }
+
+    @media screen and (max-width: 768px) {
+        section.event {
+            padding: 1rem;
+        }
+
+        section.event:hover {
+            background-color: unset;
+        }
+    }
 </style>
 
 {#each events as event}
