@@ -7,11 +7,9 @@
 
     export let options;
     export let activePage;
+    export let isSmallScreen;
 
     let isMenuExpanded = false;
-
-    let deviceWidth = window.innerWidth;
-    $:isSmallScreen = deviceWidth <= 768;
 
     let socials;
     const unsubscribe = navStore.subscribe(value => socials = value);
@@ -61,8 +59,20 @@
     @media screen and (max-width: 768px) {
         nav {
             width: 100%;
-            padding: 1.5rem 0.5rem;
+            padding: 1.5rem 1rem;
             justify-content: space-between;
+        }
+
+        section.sm-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #202020;
+            z-index: 5;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+            padding: 1rem 0;
         }
 
         section.nav-buttons {
@@ -70,11 +80,15 @@
             flex-direction: column;
             align-items: flex-start;
             margin: 0;
-            gap: 0rem;
-            background-color: #202020;
-            z-index: 5;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+            width: 100%;
         }
+    }
+
+    section.socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
     }
 </style>
 
@@ -103,7 +117,8 @@
     </nav>
 </div>
 {#if isMenuExpanded}
-    <section class="nav-buttons" in:slide out:slide>
+<section class="sm-nav" in:slide out:slide>
+    <section class="nav-buttons">
         {#each options as option}
             <Button
                 label='{option}'
@@ -111,4 +126,8 @@
                 on:changePage={changePage} />
         {/each}
     </section>
+    <section class="socials">
+        <Social socials={socials} />
+    </section>
+</section>
 {/if}

@@ -8,6 +8,9 @@
     let direction = 1;
     const pages = ['home', 'work', 'education', 'projects', 'CV'];
 
+    let deviceWidth = window.innerWidth;
+    $:isSmallScreen = deviceWidth <= 768;
+
     const changePage = (event) => {
         direction = pages.findIndex(page => page === event.detail) > pages.findIndex(page => page === currentPage) ? 1 : -1;
         currentPage = event.detail;
@@ -31,6 +34,7 @@
     <Navbar
         options={pages}
         activePage={currentPage}
+        isSmallScreen={isSmallScreen}
         on:changePage={changePage} />
     <section class="scroll-bar">
         <Svrollbar />
