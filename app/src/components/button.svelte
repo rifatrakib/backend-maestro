@@ -9,11 +9,13 @@
     export let isActive = false;
     export let isLogo = false;
     export let isCV = false;
+    export let isMenu = false;
 
     let buttonLabel = `${label.charAt(0).toUpperCase()}${label.slice(1)}`;
 
     const changePage = () => dispatch('changePage', label);
     const downloadCV = () => dispatch('download');
+    const menuClicked = () => dispatch('menuClicked');
 </script>
 
 <style>
@@ -95,6 +97,15 @@
         button.has-icon {
             margin: 0.5rem;
         }
+
+        button.menu {
+            margin: 0;
+        }
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 </style>
 
@@ -103,6 +114,10 @@
         <span>Backend</span>
         <span class="separator">|</span>
         <span>Maestro</span>
+    </button>
+{:else if isMenu}
+    <button class="has-icon menu" on:click={menuClicked}>
+        <img src="{icon}" alt="link" />
     </button>
 {:else if icon && !isCV}
     <a href="{link}" target="_blank" rel="noreferrer">

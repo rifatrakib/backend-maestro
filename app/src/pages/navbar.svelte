@@ -1,11 +1,17 @@
 <script>
     import { createEventDispatcher, onDestroy } from 'svelte';
+    import { slide } from 'svelte/transition';
     import Button from '../components/button.svelte';
     import Social from '../components/social.svelte';
     import { navStore } from './store.js';
 
     export let options;
     export let activePage;
+
+    let isMenuExpanded = false;
+
+    let deviceWidth = window.innerWidth;
+    $:isSmallScreen = deviceWidth <= 768;
 
     let socials;
     const unsubscribe = navStore.subscribe(value => socials = value);
@@ -16,7 +22,12 @@
 
     function changePage(event) {
         activePage = event.detail;
+        isMenuExpanded = false;
         dispatch('changePage', activePage);
+    }
+
+    function menuClicked() {
+        isMenuExpanded = !isMenuExpanded;
     }
 </script>
 
@@ -50,14 +61,19 @@
     @media screen and (max-width: 768px) {
         nav {
             width: 100%;
-            padding: 1rem;
+            padding: 1.5rem 0.5rem;
             justify-content: space-between;
         }
 
-        nav section.nav-buttons {
+        section.nav-buttons {
+            display: flex;
             flex-direction: column;
+            align-items: flex-start;
             margin: 0;
-            display: none;
+            gap: 0rem;
+            background-color: #202020;
+            z-index: 5;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
         }
     }
 </style>
@@ -65,14 +81,34 @@
 <div>
     <nav>
         <Button label='home' isLogo={true} on:changePage />
-        <section class="nav-buttons">
-            {#each options as option}
+        {#if !isSmallScreen}
+            <section class="nav-buttons">
+                {#each options as option}
+                    <Button
+                        label='{option}'
+                        isActive={option === activePage}
+                        on:changePage={changePage} />
+                {/each}
+            </section>
+            <Social socials={socials} />
+        {:else}
+            <section class:expanded={isMenuExpanded}>
                 <Button
-                    label='{option}'
-                    isActive={option === activePage}
-                    on:changePage={changePage} />
-            {/each}
-        </section>
-        <Social socials={socials} />
+                    label=''
+                    icon={isMenuExpanded ? '/icons/menu-close.svg' : '/icons/menu.svg'}
+                    isMenu={true}
+                    on:menuClicked={menuClicked} />
+            </section>
+        {/if}
     </nav>
 </div>
+{#if isMenuExpanded}
+    <section class="nav-buttons" in:slide out:slide>
+        {#each options as option}
+            <Button
+                label='{option}'
+                isActive={option === activePage}
+                on:changePage={changePage} />
+        {/each}
+    </section>
+{/if}
