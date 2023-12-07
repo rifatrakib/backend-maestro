@@ -24,6 +24,16 @@
         max-width: 100%;
         max-height: 100%;
     }
+
+    @media screen and (max-width: 768px) {
+        div {
+            padding: 5px;
+        }
+
+        img {
+            padding: 10px;
+        }
+    }
 </style>
 
 <div>

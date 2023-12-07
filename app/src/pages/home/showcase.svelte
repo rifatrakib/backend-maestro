@@ -17,6 +17,14 @@
         grid-template-columns: repeat(3, 1fr);
         justify-content: space-evenly;
     }
+
+    @media screen and (max-width: 768px) {
+        section {
+            margin: 0 1rem;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
 </style>
 
 <Header text={'Areas of experience'} isSectionHeader={true} />

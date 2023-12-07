@@ -39,6 +39,13 @@
         font-weight: 700;
         line-height: 3.75rem;
     }
+
+    @media screen and (max-width: 768px) {
+        header.section-header {
+            font-size: 2rem;
+            margin: 0 1rem;
+        }
+    }
 </style>
 
 <header class:section-header={isSectionHeader} class:cv-section={cvSection} class:namecard={isNamecard}>

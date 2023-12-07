@@ -39,6 +39,6 @@
     <section class="scroll-bar">
         <Svrollbar />
     </section>
-    <Body currentPage={currentPage} direction={direction} />
+    <Body currentPage={currentPage} direction={direction} isSmallScreen={isSmallScreen} />
     <Footer />
 </main>

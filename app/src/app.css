@@ -56,6 +56,12 @@ section.container {
     margin: 5rem auto;
 }
 
+@media screen and (max-width: 768px) {
+    section.container {
+        margin: 2.5rem auto;
+    }
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

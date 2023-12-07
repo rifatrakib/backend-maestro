@@ -8,6 +8,7 @@
     import { infocardStore } from './store.js';
 
     export let transitionParams;
+    export let isSmallScreen;
 
     let data;
     const unsubscribe = infocardStore.subscribe(value => data = value);
@@ -24,11 +25,19 @@
         padding: 2rem 3rem;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     }
+
+    @media screen and (max-width: 768px) {
+        section.hero {
+            margin-top: 1rem;
+            border-radius: 0;
+            padding: 1.5rem;
+        }
+    }
 </style>
 
 <section in:fly={transitionParams.in} out:fade={transitionParams.out}>
     <section class="container hero">
-        <Hero />
+        <Hero isSmallScreen={isSmallScreen} />
     </section>
     <section class="container infocard">
         <Infocard header={data.header} text={data.text} isCommonText={true} />

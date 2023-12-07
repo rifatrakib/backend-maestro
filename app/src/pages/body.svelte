@@ -8,6 +8,7 @@
 
     export let currentPage;
     export let direction;
+    export let isSmallScreen;
 
     $:transitionParams = {
         in: {x: 500 * direction, duration: 1000, easing: quintInOut},
@@ -33,7 +34,7 @@
 
 <div>
     {#if currentPage === 'home'}
-        <Home transitionParams={transitionParams} />
+        <Home transitionParams={transitionParams} isSmallScreen={isSmallScreen} />
     {:else if currentPage === 'work'}
         <Work transitionParams={transitionParams} />
     {:else if currentPage === 'education'}

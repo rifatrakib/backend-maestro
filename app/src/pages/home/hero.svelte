@@ -2,6 +2,8 @@
     import { onDestroy, onMount } from 'svelte';
     import { heroStore } from './store.js';
 
+    export let isSmallScreen;
+
     let image;
     let sentences;
     const unsubscribe = heroStore.subscribe(value => {
@@ -88,14 +90,22 @@
     .hidden {
         visibility: hidden;
     }
+
+    @media screen and (max-width: 768px) {
+        .card {
+            flex-direction: column;
+        }
+    }
 </style>
 
 <section class="card">
     <section class="image-column">
         <img src=".{image.link}" alt="{image.alt}" />
     </section>
-    <section class="text-column">
-        <span>&gt;</span>
-        <p>{animatedText}<span class:hidden={!cursorVisible}>_</span></p>
-    </section>
+    {#if !isSmallScreen}
+        <section class="text-column">
+            <span>&gt;</span>
+            <p>{animatedText}<span class:hidden={!cursorVisible}>_</span></p>
+        </section>
+    {/if}
 </section>

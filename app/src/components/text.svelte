@@ -65,6 +65,14 @@
         font-size: 1.5rem;
         font-weight: 300;
     }
+
+    @media screen and (max-width: 768px) {
+        p.infobox {
+            margin: 0 1rem;
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
+    }
 </style>
 
 <p class="size-{sizeClass} color-{color} align-{align} {placement}" class:namecard={isNamecard}>
